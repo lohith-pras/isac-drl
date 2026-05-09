@@ -71,6 +71,72 @@ def _make_isac_env() -> ISACEnv:
 
 
 # ---------------------------------------------------------------------------
+# Policy probe (debug)
+# ---------------------------------------------------------------------------
+def _debug_policy_probe(model: DDPG, vec_env: VecNormalize, n_steps: int = 5) -> None:
+    """
+    Run ``n_steps`` deterministic steps and report the raw action outputs.
+
+    Prints the beamforming weight vector (real + imag parts, shape 2×Nt) at
+    each step, then computes the L2 distance between consecutive actions so
+    it is immediately clear whether the agent is producing a *static* policy
+    (same action regardless of observation) or a *dynamic* one (action varies
+    with the changing channel / scenario state).
+
+    Parameters
+    ----------
+    model : DDPG
+        Loaded stable-baselines3 DDPG agent.
+    vec_env : VecNormalize
+        The wrapped, frozen evaluation environment.
+    n_steps : int
+        Number of steps to probe (default 5).
+    """
+    print("=" * 60)
+    print(f"DEBUG: Policy probe — {n_steps} deterministic steps")
+    print("=" * 60)
+
+    obs = vec_env.reset()
+    prev_action: np.ndarray | None = None
+
+    for step in range(n_steps):
+        action, _ = model.predict(obs, deterministic=True)
+        raw_action = action[0]   # shape (2*Nt,); strip the batch dimension
+
+        # Split into real / imag halves for readability
+        n_half = len(raw_action) // 2
+        real_part = raw_action[:n_half]
+        imag_part = raw_action[n_half:]
+
+        print(f"\n  Step {step + 1}/{n_steps}")
+        print(f"    real parts : [{', '.join(f'{v:+.5f}' for v in real_part)}]")
+        print(f"    imag parts : [{', '.join(f'{v:+.5f}' for v in imag_part)}]")
+
+        if prev_action is not None:
+            delta = np.linalg.norm(raw_action - prev_action)
+            changed = "CHANGED  ✓" if delta > 1e-6 else "STATIC   ✗"
+            print(f"    Δ vs prev  : {delta:.6f}  →  {changed}")
+        else:
+            print(f"    Δ vs prev  : — (first step)")
+
+        prev_action = raw_action.copy()
+        obs, _, done_arr, _ = vec_env.step(action)
+        if bool(done_arr[0]):
+            print("    (episode ended early during probe)")
+            obs = vec_env.reset()
+            prev_action = None
+
+    # Overall verdict
+    print()
+    if prev_action is not None:
+        # Collect all actions again for a quick all-same check
+        print("  Verdict: see Δ values above.")
+        print("    • All Δ ≈ 0  →  STATIC policy (agent ignores observation)")
+        print("    • Any Δ > 0  →  DYNAMIC policy (action adapts to state)")
+    print("=" * 60 + "\n")
+
+
+# ---------------------------------------------------------------------------
 # Main evaluation routine
 # ---------------------------------------------------------------------------
 def evaluate(n_episodes: int = N_EVAL_EPISODES) -> dict[str, np.ndarray]:
@@ -123,6 +189,11 @@ def evaluate(n_episodes: int = N_EVAL_EPISODES) -> dict[str, np.ndarray]:
     print(f"Loading model from: {model_zip}")
     model = DDPG.load(str(_MODEL_DIR / "best_model"), env=vec_env)
     print("Model loaded successfully.\n")
+
+    # ------------------------------------------------------------------
+    # 3b. DEBUG: static vs. dynamic policy probe (5 steps)
+    # ------------------------------------------------------------------
+    _debug_policy_probe(model, vec_env)
 
     # ------------------------------------------------------------------
     # 4. Run evaluation episodes
