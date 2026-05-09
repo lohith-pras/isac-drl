@@ -25,10 +25,10 @@ or
     python evaluation/plot_results.py
 """
 
+from __future__ import annotations
+
 import sys
 sys.path.insert(0, '/content/isac-mimo-drl')
-
-from __future__ import annotations
 
 import math
 from pathlib import Path
