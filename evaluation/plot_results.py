@@ -25,6 +25,9 @@ or
     python evaluation/plot_results.py
 """
 
+import sys
+sys.path.insert(0, '/content/isac-mimo-drl')
+
 from __future__ import annotations
 
 import math

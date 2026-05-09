@@ -14,6 +14,9 @@ or
     python evaluation/evaluate_agent.py
 """
 
+import sys
+sys.path.insert(0, '/content/isac-mimo-drl')
+
 from __future__ import annotations
 
 from pathlib import Path
