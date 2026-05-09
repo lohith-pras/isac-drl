@@ -1,0 +1,42 @@
+[project]
+name = "isac-mimo-drl"
+version = "0.1.0"
+description = "Deep Reinforcement Learning for Integrated Sensing and Communication (ISAC) in MIMO Beamforming"
+readme = "README.md"
+requires-python = ">=3.11"
+
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "gymnasium",
+    "stable-baselines3",  # DRL algorithms
+    "torch",
+    "cvxpy",
+    "tensorboard",
+    "jupyter",
+    "tqdm",
+    "openai",
+    "python-dotenv>=1.2.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "ruff",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/isac_mimo_drl"]
