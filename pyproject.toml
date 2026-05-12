@@ -40,3 +40,8 @@ select = ["E", "F", "I", "W"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/isac_mimo_drl"]
+
+[dependency-groups]
+dev = [
+    "graphifyy>=0.7.16",
+]

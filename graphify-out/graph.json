@@ -1,0 +1,4106 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "main.py",
+      "file_type": "code",
+      "source_file": "main.py",
+      "source_location": "L1",
+      "id": "main_py",
+      "community": 11,
+      "norm_label": "main.py"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "main.py",
+      "source_location": "L1",
+      "id": "isac_mimo_drl_main_main",
+      "community": 11,
+      "norm_label": "main()"
+    },
+    {
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "training/__init__.py",
+      "source_location": "L1",
+      "id": "training_init_py",
+      "community": 13,
+      "norm_label": "__init__.py"
+    },
+    {
+      "label": "train_ddpg.py",
+      "file_type": "code",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L1",
+      "id": "training_train_ddpg_py",
+      "community": 1,
+      "norm_label": "train_ddpg.py"
+    },
+    {
+      "label": "ProgressCallback",
+      "file_type": "code",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L29",
+      "id": "training_train_ddpg_progresscallback",
+      "community": 1,
+      "norm_label": "progresscallback"
+    },
+    {
+      "label": "BaseCallback",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "basecallback",
+      "community": 1,
+      "norm_label": "basecallback"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L32",
+      "id": "training_train_ddpg_progresscallback_init",
+      "community": 1,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": "._on_step()",
+      "file_type": "code",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L36",
+      "id": "training_train_ddpg_progresscallback_on_step",
+      "community": 1,
+      "norm_label": "._on_step()"
+    },
+    {
+      "label": "NoiseDecayCallback",
+      "file_type": "code",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L52",
+      "id": "training_train_ddpg_noisedecaycallback",
+      "community": 1,
+      "norm_label": "noisedecaycallback"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L59",
+      "id": "training_train_ddpg_noisedecaycallback_init",
+      "community": 1,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": "._on_step()",
+      "file_type": "code",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L70",
+      "id": "training_train_ddpg_noisedecaycallback_on_step",
+      "community": 1,
+      "norm_label": "._on_step()"
+    },
+    {
+      "label": "make_isac_env()",
+      "file_type": "code",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L83",
+      "id": "training_train_ddpg_make_isac_env",
+      "community": 1,
+      "norm_label": "make_isac_env()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L109",
+      "id": "training_train_ddpg_main",
+      "community": 1,
+      "norm_label": "main()"
+    },
+    {
+      "label": "Training script: DDPG for ISAC-MIMO beamforming.  Uses stable-baselines3 DDPG wi",
+      "file_type": "rationale",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L1",
+      "id": "training_train_ddpg_rationale_1",
+      "community": 1,
+      "norm_label": "training script: ddpg for isac-mimo beamforming.  uses stable-baselines3 ddpg wi"
+    },
+    {
+      "label": "Prints a summary every ``print_freq`` environment steps.",
+      "file_type": "rationale",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L30",
+      "id": "training_train_ddpg_rationale_30",
+      "community": 1,
+      "norm_label": "prints a summary every ``print_freq`` environment steps."
+    },
+    {
+      "label": "Linearly decays the OU action-noise sigma from ``sigma_start``     to ``sigma_en",
+      "file_type": "rationale",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L53",
+      "id": "training_train_ddpg_rationale_53",
+      "community": 1,
+      "norm_label": "linearly decays the ou action-noise sigma from ``sigma_start``     to ``sigma_en"
+    },
+    {
+      "label": "Build and return a plain ISACEnv (will be wrapped later).",
+      "file_type": "rationale",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L84",
+      "id": "training_train_ddpg_rationale_84",
+      "community": 1,
+      "norm_label": "build and return a plain isacenv (will be wrapped later)."
+    },
+    {
+      "label": "Train DDPG on the ISAC-MIMO environment.",
+      "file_type": "rationale",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L110",
+      "id": "training_train_ddpg_rationale_110",
+      "community": 1,
+      "norm_label": "train ddpg on the isac-mimo environment."
+    },
+    {
+      "label": "classical_baseline.py",
+      "file_type": "code",
+      "source_file": "training/classical_baseline.py",
+      "source_location": "L1",
+      "id": "training_classical_baseline_py",
+      "community": 8,
+      "norm_label": "classical_baseline.py"
+    },
+    {
+      "label": "make_env()",
+      "file_type": "code",
+      "source_file": "training/classical_baseline.py",
+      "source_location": "L23",
+      "id": "training_classical_baseline_make_env",
+      "community": 8,
+      "norm_label": "make_env()"
+    },
+    {
+      "label": "dft_action_for_aoa()",
+      "file_type": "code",
+      "source_file": "training/classical_baseline.py",
+      "source_location": "L45",
+      "id": "training_classical_baseline_dft_action_for_aoa",
+      "community": 8,
+      "norm_label": "dft_action_for_aoa()"
+    },
+    {
+      "label": "run_baseline()",
+      "file_type": "code",
+      "source_file": "training/classical_baseline.py",
+      "source_location": "L64",
+      "id": "training_classical_baseline_run_baseline",
+      "community": 8,
+      "norm_label": "run_baseline()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "training/classical_baseline.py",
+      "source_location": "L138",
+      "id": "training_classical_baseline_main",
+      "community": 8,
+      "norm_label": "main()"
+    },
+    {
+      "label": "Classical beamforming baseline for ISAC-MIMO.  Runs a fixed DFT (steering-vector",
+      "file_type": "rationale",
+      "source_file": "training/classical_baseline.py",
+      "source_location": "L1",
+      "id": "training_classical_baseline_rationale_1",
+      "community": 8,
+      "norm_label": "classical beamforming baseline for isac-mimo.  runs a fixed dft (steering-vector"
+    },
+    {
+      "label": "Create a fresh ISACEnv instance with default parameters.",
+      "file_type": "rationale",
+      "source_file": "training/classical_baseline.py",
+      "source_location": "L24",
+      "id": "training_classical_baseline_rationale_24",
+      "community": 8,
+      "norm_label": "create a fresh isacenv instance with default parameters."
+    },
+    {
+      "label": "Return a simple DFT (steering-vector) beamformer aligned with *aoa*.      The be",
+      "file_type": "rationale",
+      "source_file": "training/classical_baseline.py",
+      "source_location": "L46",
+      "id": "training_classical_baseline_rationale_46",
+      "community": 8,
+      "norm_label": "return a simple dft (steering-vector) beamformer aligned with *aoa*.      the be"
+    },
+    {
+      "label": "Run the classical DFT beamforming baseline.      Calibration of the sensing norm",
+      "file_type": "rationale",
+      "source_file": "training/classical_baseline.py",
+      "source_location": "L68",
+      "id": "training_classical_baseline_rationale_68",
+      "community": 8,
+      "norm_label": "run the classical dft beamforming baseline.      calibration of the sensing norm"
+    },
+    {
+      "label": "Execute the classical baseline benchmark and save results.",
+      "file_type": "rationale",
+      "source_file": "training/classical_baseline.py",
+      "source_location": "L139",
+      "id": "training_classical_baseline_rationale_139",
+      "community": 8,
+      "norm_label": "execute the classical baseline benchmark and save results."
+    },
+    {
+      "label": "test_environment.py",
+      "file_type": "code",
+      "source_file": "tests/test_environment.py",
+      "source_location": "L1",
+      "id": "tests_test_environment_py",
+      "community": 5,
+      "norm_label": "test_environment.py"
+    },
+    {
+      "label": "test_environment()",
+      "file_type": "code",
+      "source_file": "tests/test_environment.py",
+      "source_location": "L23",
+      "id": "tests_test_environment_test_environment",
+      "community": 5,
+      "norm_label": "test_environment()"
+    },
+    {
+      "label": "Manual test for the ISAC-MIMO environment.  Runs a short rollout with random act",
+      "file_type": "rationale",
+      "source_file": "tests/test_environment.py",
+      "source_location": "L1",
+      "id": "tests_test_environment_rationale_1",
+      "community": 5,
+      "norm_label": "manual test for the isac-mimo environment.  runs a short rollout with random act"
+    },
+    {
+      "label": "Instantiate ISACEnv and run 10 random steps.      Prints observation shape, acti",
+      "file_type": "rationale",
+      "source_file": "tests/test_environment.py",
+      "source_location": "L24",
+      "id": "tests_test_environment_rationale_24",
+      "community": 5,
+      "norm_label": "instantiate isacenv and run 10 random steps.      prints observation shape, acti"
+    },
+    {
+      "label": "config.py",
+      "file_type": "code",
+      "source_file": "utils/config.py",
+      "source_location": "L1",
+      "id": "utils_config_py",
+      "community": 10,
+      "norm_label": "config.py"
+    },
+    {
+      "label": "get_nvidia_client()",
+      "file_type": "code",
+      "source_file": "utils/config.py",
+      "source_location": "L21",
+      "id": "utils_config_get_nvidia_client",
+      "community": 10,
+      "norm_label": "get_nvidia_client()"
+    },
+    {
+      "label": "Configuration module for ISAC-MIMO-DRL.  Loads environment variables from .env a",
+      "file_type": "rationale",
+      "source_file": "utils/config.py",
+      "source_location": "L1",
+      "id": "utils_config_rationale_1",
+      "community": 10,
+      "norm_label": "configuration module for isac-mimo-drl.  loads environment variables from .env a"
+    },
+    {
+      "label": "Return an OpenAI-compatible client configured for the NVIDIA Build API.",
+      "file_type": "rationale",
+      "source_file": "utils/config.py",
+      "source_location": "L22",
+      "id": "utils_config_rationale_22",
+      "community": 10,
+      "norm_label": "return an openai-compatible client configured for the nvidia build api."
+    },
+    {
+      "label": "reward_config.py",
+      "file_type": "code",
+      "source_file": "utils/reward_config.py",
+      "source_location": "L1",
+      "id": "utils_reward_config_py",
+      "community": 1,
+      "norm_label": "reward_config.py"
+    },
+    {
+      "label": "RewardConfig",
+      "file_type": "code",
+      "source_file": "utils/reward_config.py",
+      "source_location": "L8",
+      "id": "utils_reward_config_rewardconfig",
+      "community": 1,
+      "norm_label": "rewardconfig"
+    },
+    {
+      "label": ".dbm_to_linear()",
+      "file_type": "code",
+      "source_file": "utils/reward_config.py",
+      "source_location": "L29",
+      "id": "utils_reward_config_rewardconfig_dbm_to_linear",
+      "community": 1,
+      "norm_label": ".dbm_to_linear()"
+    },
+    {
+      "label": "Reward configuration dataclass for ISAC-MIMO-DRL.",
+      "file_type": "rationale",
+      "source_file": "utils/reward_config.py",
+      "source_location": "L1",
+      "id": "utils_reward_config_rationale_1",
+      "community": 1,
+      "norm_label": "reward configuration dataclass for isac-mimo-drl."
+    },
+    {
+      "label": "Configuration for the ISAC reward function.      Attributes     ----------     a",
+      "file_type": "rationale",
+      "source_file": "utils/reward_config.py",
+      "source_location": "L9",
+      "id": "utils_reward_config_rationale_9",
+      "community": 1,
+      "norm_label": "configuration for the isac reward function.      attributes     ----------     a"
+    },
+    {
+      "label": "Convert a dBm value to linear scale (Watts).          Parameters         -------",
+      "file_type": "rationale",
+      "source_file": "utils/reward_config.py",
+      "source_location": "L30",
+      "id": "utils_reward_config_rationale_30",
+      "community": 1,
+      "norm_label": "convert a dbm value to linear scale (watts).          parameters         -------"
+    },
+    {
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "utils/__init__.py",
+      "source_location": "L1",
+      "id": "utils_init_py",
+      "community": 14,
+      "norm_label": "__init__.py"
+    },
+    {
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "models/__init__.py",
+      "source_location": "L1",
+      "id": "models_init_py",
+      "community": 15,
+      "norm_label": "__init__.py"
+    },
+    {
+      "label": "isac_env.py",
+      "file_type": "code",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L1",
+      "id": "environment_isac_env_py",
+      "community": 0,
+      "norm_label": "isac_env.py"
+    },
+    {
+      "label": "ISACEnv",
+      "file_type": "code",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L23",
+      "id": "environment_isac_env_isacenv",
+      "community": 0,
+      "norm_label": "isacenv"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L66",
+      "id": "environment_isac_env_isacenv_init",
+      "community": 0,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": "._calibrate_sensing_bound()",
+      "file_type": "code",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L139",
+      "id": "environment_isac_env_isacenv_calibrate_sensing_bound",
+      "community": 0,
+      "norm_label": "._calibrate_sensing_bound()"
+    },
+    {
+      "label": "._action_to_beamformer()",
+      "file_type": "code",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L189",
+      "id": "environment_isac_env_isacenv_action_to_beamformer",
+      "community": 0,
+      "norm_label": "._action_to_beamformer()"
+    },
+    {
+      "label": "._get_observation()",
+      "file_type": "code",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L222",
+      "id": "environment_isac_env_isacenv_get_observation",
+      "community": 0,
+      "norm_label": "._get_observation()"
+    },
+    {
+      "label": "._communication_rate()",
+      "file_type": "code",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L246",
+      "id": "environment_isac_env_isacenv_communication_rate",
+      "community": 0,
+      "norm_label": "._communication_rate()"
+    },
+    {
+      "label": "._sensing_gain()",
+      "file_type": "code",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L276",
+      "id": "environment_isac_env_isacenv_sensing_gain",
+      "community": 0,
+      "norm_label": "._sensing_gain()"
+    },
+    {
+      "label": "._normalise()",
+      "file_type": "code",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L295",
+      "id": "environment_isac_env_isacenv_normalise",
+      "community": 0,
+      "norm_label": "._normalise()"
+    },
+    {
+      "label": ".reset()",
+      "file_type": "code",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L317",
+      "id": "environment_isac_env_isacenv_reset",
+      "community": 0,
+      "norm_label": ".reset()"
+    },
+    {
+      "label": ".step()",
+      "file_type": "code",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L349",
+      "id": "environment_isac_env_isacenv_step",
+      "community": 0,
+      "norm_label": ".step()"
+    },
+    {
+      "label": ".render()",
+      "file_type": "code",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L407",
+      "id": "environment_isac_env_isacenv_render",
+      "community": 0,
+      "norm_label": ".render()"
+    },
+    {
+      "label": "Custom Gymnasium environment for ISAC-MIMO beamforming.  The agent controls a co",
+      "file_type": "rationale",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L1",
+      "id": "environment_isac_env_rationale_1",
+      "community": 0,
+      "norm_label": "custom gymnasium environment for isac-mimo beamforming.  the agent controls a co"
+    },
+    {
+      "label": "Gymnasium environment for ISAC-MIMO beamforming.      Observation     ----------",
+      "file_type": "rationale",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L24",
+      "id": "environment_isac_env_rationale_24",
+      "community": 0,
+      "norm_label": "gymnasium environment for isac-mimo beamforming.      observation     ----------"
+    },
+    {
+      "label": "Estimate an empirical upper bound for the raw sensing gain.          Bootstraps",
+      "file_type": "rationale",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L140",
+      "id": "environment_isac_env_rationale_140",
+      "community": 0,
+      "norm_label": "estimate an empirical upper bound for the raw sensing gain.          bootstraps"
+    },
+    {
+      "label": "Map a flat action vector to a complex beamforming vector.          Parameters",
+      "file_type": "rationale",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L190",
+      "id": "environment_isac_env_rationale_190",
+      "community": 0,
+      "norm_label": "map a flat action vector to a complex beamforming vector.          parameters"
+    },
+    {
+      "label": "Build the observation vector.          Returns         -------         np.ndarra",
+      "file_type": "rationale",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L223",
+      "id": "environment_isac_env_rationale_223",
+      "community": 0,
+      "norm_label": "build the observation vector.          returns         -------         np.ndarra"
+    },
+    {
+      "label": "Compute the achievable communication rate using the log-det formula.          Pa",
+      "file_type": "rationale",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L247",
+      "id": "environment_isac_env_rationale_247",
+      "community": 0,
+      "norm_label": "compute the achievable communication rate using the log-det formula.          pa"
+    },
+    {
+      "label": "Compute the raw array-gain toward the current AoA.          Parameters         -",
+      "file_type": "rationale",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L277",
+      "id": "environment_isac_env_rationale_277",
+      "community": 0,
+      "norm_label": "compute the raw array-gain toward the current aoa.          parameters         -"
+    },
+    {
+      "label": "Normalise a scalar to [0, 1] using a fixed theoretical upper bound.          Par",
+      "file_type": "rationale",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L296",
+      "id": "environment_isac_env_rationale_296",
+      "community": 0,
+      "norm_label": "normalise a scalar to [0, 1] using a fixed theoretical upper bound.          par"
+    },
+    {
+      "label": "Reset the environment to an initial state.          Normalisation bounds are fix",
+      "file_type": "rationale",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L318",
+      "id": "environment_isac_env_rationale_318",
+      "community": 0,
+      "norm_label": "reset the environment to an initial state.          normalisation bounds are fix"
+    },
+    {
+      "label": "Execute one time-step with the given beamforming action.          Parameters",
+      "file_type": "rationale",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L350",
+      "id": "environment_isac_env_rationale_350",
+      "community": 0,
+      "norm_label": "execute one time-step with the given beamforming action.          parameters"
+    },
+    {
+      "label": "Render the current environment state (no-op for now).          Parameters",
+      "file_type": "rationale",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L408",
+      "id": "environment_isac_env_rationale_408",
+      "community": 0,
+      "norm_label": "render the current environment state (no-op for now).          parameters"
+    },
+    {
+      "label": "mimo_system.py",
+      "file_type": "code",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L1",
+      "id": "environment_mimo_system_py",
+      "community": 4,
+      "norm_label": "mimo_system.py"
+    },
+    {
+      "label": "MIMOSystem",
+      "file_type": "code",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L6",
+      "id": "environment_mimo_system_mimosystem",
+      "community": 4,
+      "norm_label": "mimosystem"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L22",
+      "id": "environment_mimo_system_mimosystem_init",
+      "community": 4,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": "._steering_vector()",
+      "file_type": "code",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L43",
+      "id": "environment_mimo_system_mimosystem_steering_vector",
+      "community": 4,
+      "norm_label": "._steering_vector()"
+    },
+    {
+      "label": ".tx_steering_vector()",
+      "file_type": "code",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L64",
+      "id": "environment_mimo_system_mimosystem_tx_steering_vector",
+      "community": 4,
+      "norm_label": ".tx_steering_vector()"
+    },
+    {
+      "label": ".rx_steering_vector()",
+      "file_type": "code",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L80",
+      "id": "environment_mimo_system_mimosystem_rx_steering_vector",
+      "community": 4,
+      "norm_label": ".rx_steering_vector()"
+    },
+    {
+      "label": ".init_beamformer()",
+      "file_type": "code",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L99",
+      "id": "environment_mimo_system_mimosystem_init_beamformer",
+      "community": 4,
+      "norm_label": ".init_beamformer()"
+    },
+    {
+      "label": ".array_gain()",
+      "file_type": "code",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L126",
+      "id": "environment_mimo_system_mimosystem_array_gain",
+      "community": 4,
+      "norm_label": ".array_gain()"
+    },
+    {
+      "label": "MIMO system model for mmWave ISAC beamforming.",
+      "file_type": "rationale",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L1",
+      "id": "environment_mimo_system_rationale_1",
+      "community": 4,
+      "norm_label": "mimo system model for mmwave isac beamforming."
+    },
+    {
+      "label": "MIMO system model for millimeter-wave (mmWave) ISAC scenarios.      Parameters",
+      "file_type": "rationale",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L7",
+      "id": "environment_mimo_system_rationale_7",
+      "community": 4,
+      "norm_label": "mimo system model for millimeter-wave (mmwave) isac scenarios.      parameters"
+    },
+    {
+      "label": "Compute the ULA steering vector.          Parameters         ----------",
+      "file_type": "rationale",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L44",
+      "id": "environment_mimo_system_rationale_44",
+      "community": 4,
+      "norm_label": "compute the ula steering vector.          parameters         ----------"
+    },
+    {
+      "label": "Compute the transmit ULA steering vector.          Parameters         ----------",
+      "file_type": "rationale",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L65",
+      "id": "environment_mimo_system_rationale_65",
+      "community": 4,
+      "norm_label": "compute the transmit ula steering vector.          parameters         ----------"
+    },
+    {
+      "label": "Compute the receive ULA steering vector.          Parameters         ----------",
+      "file_type": "rationale",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L81",
+      "id": "environment_mimo_system_rationale_81",
+      "community": 4,
+      "norm_label": "compute the receive ula steering vector.          parameters         ----------"
+    },
+    {
+      "label": "Initialize a transmit beamforming matrix.          Parameters         ----------",
+      "file_type": "rationale",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L100",
+      "id": "environment_mimo_system_rationale_100",
+      "community": 4,
+      "norm_label": "initialize a transmit beamforming matrix.          parameters         ----------"
+    },
+    {
+      "label": "Compute the array gain for a given beamforming vector and angle.          Parame",
+      "file_type": "rationale",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L131",
+      "id": "environment_mimo_system_rationale_131",
+      "community": 4,
+      "norm_label": "compute the array gain for a given beamforming vector and angle.          parame"
+    },
+    {
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "environment/__init__.py",
+      "source_location": "L1",
+      "id": "environment_init_py",
+      "community": 16,
+      "norm_label": "__init__.py"
+    },
+    {
+      "label": "v2x_scenario.py",
+      "file_type": "code",
+      "source_file": "environment/v2x_scenario.py",
+      "source_location": "L1",
+      "id": "environment_v2x_scenario_py",
+      "community": 6,
+      "norm_label": "v2x_scenario.py"
+    },
+    {
+      "label": "V2XScenario",
+      "file_type": "code",
+      "source_file": "environment/v2x_scenario.py",
+      "source_location": "L16",
+      "id": "environment_v2x_scenario_v2xscenario",
+      "community": 6,
+      "norm_label": "v2xscenario"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "environment/v2x_scenario.py",
+      "source_location": "L40",
+      "id": "environment_v2x_scenario_v2xscenario_init",
+      "community": 6,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": "._vehicle_position()",
+      "file_type": "code",
+      "source_file": "environment/v2x_scenario.py",
+      "source_location": "L67",
+      "id": "environment_v2x_scenario_v2xscenario_vehicle_position",
+      "community": 6,
+      "norm_label": "._vehicle_position()"
+    },
+    {
+      "label": "._recompute_geometry()",
+      "file_type": "code",
+      "source_file": "environment/v2x_scenario.py",
+      "source_location": "L78",
+      "id": "environment_v2x_scenario_v2xscenario_recompute_geometry",
+      "community": 6,
+      "norm_label": "._recompute_geometry()"
+    },
+    {
+      "label": "current_state()",
+      "file_type": "code",
+      "source_file": "environment/v2x_scenario.py",
+      "source_location": "L100",
+      "id": "environment_v2x_scenario_current_state",
+      "community": 6,
+      "norm_label": "current_state()"
+    },
+    {
+      "label": ".step()",
+      "file_type": "code",
+      "source_file": "environment/v2x_scenario.py",
+      "source_location": "L119",
+      "id": "environment_v2x_scenario_v2xscenario_step",
+      "community": 6,
+      "norm_label": ".step()"
+    },
+    {
+      "label": ".reset()",
+      "file_type": "code",
+      "source_file": "environment/v2x_scenario.py",
+      "source_location": "L139",
+      "id": "environment_v2x_scenario_v2xscenario_reset",
+      "community": 6,
+      "norm_label": ".reset()"
+    },
+    {
+      "label": "Basic V2X scenario with a fixed base station and a moving vehicle.  State -----",
+      "file_type": "rationale",
+      "source_file": "environment/v2x_scenario.py",
+      "source_location": "L1",
+      "id": "environment_v2x_scenario_rationale_1",
+      "community": 6,
+      "norm_label": "basic v2x scenario with a fixed base station and a moving vehicle.  state -----"
+    },
+    {
+      "label": "One-dimensional V2X motion model.      A single vehicle moves along a straight r",
+      "file_type": "rationale",
+      "source_file": "environment/v2x_scenario.py",
+      "source_location": "L17",
+      "id": "environment_v2x_scenario_rationale_17",
+      "community": 6,
+      "norm_label": "one-dimensional v2x motion model.      a single vehicle moves along a straight r"
+    },
+    {
+      "label": "Return the current 2-D Cartesian position of the vehicle.          Returns",
+      "file_type": "rationale",
+      "source_file": "environment/v2x_scenario.py",
+      "source_location": "L68",
+      "id": "environment_v2x_scenario_rationale_68",
+      "community": 6,
+      "norm_label": "return the current 2-d cartesian position of the vehicle.          returns"
+    },
+    {
+      "label": "Compute Euclidean distance and AoA from BS to vehicle.          Returns",
+      "file_type": "rationale",
+      "source_file": "environment/v2x_scenario.py",
+      "source_location": "L79",
+      "id": "environment_v2x_scenario_rationale_79",
+      "community": 6,
+      "norm_label": "compute euclidean distance and aoa from bs to vehicle.          returns"
+    },
+    {
+      "label": "Return the current V2X state.          Returns         -------         dict[str,",
+      "file_type": "rationale",
+      "source_file": "environment/v2x_scenario.py",
+      "source_location": "L101",
+      "id": "environment_v2x_scenario_rationale_101",
+      "community": 17,
+      "norm_label": "return the current v2x state.          returns         -------         dict[str,"
+    },
+    {
+      "label": "Advance the simulation by one time-step.          The vehicle moves forward alon",
+      "file_type": "rationale",
+      "source_file": "environment/v2x_scenario.py",
+      "source_location": "L120",
+      "id": "environment_v2x_scenario_rationale_120",
+      "community": 6,
+      "norm_label": "advance the simulation by one time-step.          the vehicle moves forward alon"
+    },
+    {
+      "label": "Reset the vehicle to the initial position and time to zero.          Returns",
+      "file_type": "rationale",
+      "source_file": "environment/v2x_scenario.py",
+      "source_location": "L140",
+      "id": "environment_v2x_scenario_rationale_140",
+      "community": 6,
+      "norm_label": "reset the vehicle to the initial position and time to zero.          returns"
+    },
+    {
+      "label": "channel_model.py",
+      "file_type": "code",
+      "source_file": "environment/channel_model.py",
+      "source_location": "L1",
+      "id": "environment_channel_model_py",
+      "community": 5,
+      "norm_label": "channel_model.py"
+    },
+    {
+      "label": "SVChannelModel",
+      "file_type": "code",
+      "source_file": "environment/channel_model.py",
+      "source_location": "L17",
+      "id": "environment_channel_model_svchannelmodel",
+      "community": 5,
+      "norm_label": "svchannelmodel"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "environment/channel_model.py",
+      "source_location": "L55",
+      "id": "environment_channel_model_svchannelmodel_init",
+      "community": 5,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": "._steering_tx()",
+      "file_type": "code",
+      "source_file": "environment/channel_model.py",
+      "source_location": "L94",
+      "id": "environment_channel_model_svchannelmodel_steering_tx",
+      "community": 5,
+      "norm_label": "._steering_tx()"
+    },
+    {
+      "label": "._steering_rx()",
+      "file_type": "code",
+      "source_file": "environment/channel_model.py",
+      "source_location": "L98",
+      "id": "environment_channel_model_svchannelmodel_steering_rx",
+      "community": 5,
+      "norm_label": "._steering_rx()"
+    },
+    {
+      "label": ".generate()",
+      "file_type": "code",
+      "source_file": "environment/channel_model.py",
+      "source_location": "L106",
+      "id": "environment_channel_model_svchannelmodel_generate",
+      "community": 5,
+      "norm_label": ".generate()"
+    },
+    {
+      "label": "Clustered mmWave channel model based on the Saleh-Valenzuela model.  This module",
+      "file_type": "rationale",
+      "source_file": "environment/channel_model.py",
+      "source_location": "L1",
+      "id": "environment_channel_model_rationale_1",
+      "community": 5,
+      "norm_label": "clustered mmwave channel model based on the saleh-valenzuela model.  this module"
+    },
+    {
+      "label": "Saleh-Valenzuela (SV) clustered mmWave channel model.      The channel matrix is",
+      "file_type": "rationale",
+      "source_file": "environment/channel_model.py",
+      "source_location": "L18",
+      "id": "environment_channel_model_rationale_18",
+      "community": 5,
+      "norm_label": "saleh-valenzuela (sv) clustered mmwave channel model.      the channel matrix is"
+    },
+    {
+      "label": "Return the transmit steering vector for *angle_deg*.",
+      "file_type": "rationale",
+      "source_file": "environment/channel_model.py",
+      "source_location": "L95",
+      "id": "environment_channel_model_rationale_95",
+      "community": 5,
+      "norm_label": "return the transmit steering vector for *angle_deg*."
+    },
+    {
+      "label": "Return the receive steering vector for *angle_deg*.",
+      "file_type": "rationale",
+      "source_file": "environment/channel_model.py",
+      "source_location": "L99",
+      "id": "environment_channel_model_rationale_99",
+      "community": 5,
+      "norm_label": "return the receive steering vector for *angle_deg*."
+    },
+    {
+      "label": "Generate the complex channel matrix **H**.          The matrix includes path-los",
+      "file_type": "rationale",
+      "source_file": "environment/channel_model.py",
+      "source_location": "L107",
+      "id": "environment_channel_model_rationale_107",
+      "community": 5,
+      "norm_label": "generate the complex channel matrix **h**.          the matrix includes path-los"
+    },
+    {
+      "label": "evaluate_agent.py",
+      "file_type": "code",
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L1",
+      "id": "evaluation_evaluate_agent_py",
+      "community": 7,
+      "norm_label": "evaluate_agent.py"
+    },
+    {
+      "label": "_make_isac_env()",
+      "file_type": "code",
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L52",
+      "id": "evaluation_evaluate_agent_make_isac_env",
+      "community": 7,
+      "norm_label": "_make_isac_env()"
+    },
+    {
+      "label": "_debug_policy_probe()",
+      "file_type": "code",
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L76",
+      "id": "evaluation_evaluate_agent_debug_policy_probe",
+      "community": 7,
+      "norm_label": "_debug_policy_probe()"
+    },
+    {
+      "label": "evaluate()",
+      "file_type": "code",
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L142",
+      "id": "evaluation_evaluate_agent_evaluate",
+      "community": 7,
+      "norm_label": "evaluate()"
+    },
+    {
+      "label": "_print_summary()",
+      "file_type": "code",
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L249",
+      "id": "evaluation_evaluate_agent_print_summary",
+      "community": 7,
+      "norm_label": "_print_summary()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L276",
+      "id": "evaluation_evaluate_agent_main",
+      "community": 7,
+      "norm_label": "main()"
+    },
+    {
+      "label": "Evaluation script: DDPG agent on ISAC-MIMO environment.  Loads the best saved DD",
+      "file_type": "rationale",
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L1",
+      "id": "evaluation_evaluate_agent_rationale_1",
+      "community": 7,
+      "norm_label": "evaluation script: ddpg agent on isac-mimo environment.  loads the best saved dd"
+    },
+    {
+      "label": "Instantiate ISACEnv with Nt=4, Nr=4 and the default scenario.",
+      "file_type": "rationale",
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L53",
+      "id": "evaluation_evaluate_agent_rationale_53",
+      "community": 7,
+      "norm_label": "instantiate isacenv with nt=4, nr=4 and the default scenario."
+    },
+    {
+      "label": "Run ``n_steps`` deterministic steps and report the raw action outputs.      Prin",
+      "file_type": "rationale",
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L77",
+      "id": "evaluation_evaluate_agent_rationale_77",
+      "community": 7,
+      "norm_label": "run ``n_steps`` deterministic steps and report the raw action outputs.      prin"
+    },
+    {
+      "label": "Run ``n_episodes`` deterministic evaluation episodes.      Parameters     ------",
+      "file_type": "rationale",
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L143",
+      "id": "evaluation_evaluate_agent_rationale_143",
+      "community": 7,
+      "norm_label": "run ``n_episodes`` deterministic evaluation episodes.      parameters     ------"
+    },
+    {
+      "label": "Print mean \u00b1 std summary for each recorded metric.",
+      "file_type": "rationale",
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L250",
+      "id": "evaluation_evaluate_agent_rationale_250",
+      "community": 7,
+      "norm_label": "print mean \u00b1 std summary for each recorded metric."
+    },
+    {
+      "label": "Entry point: evaluate, save results, and print summary.",
+      "file_type": "rationale",
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L277",
+      "id": "evaluation_evaluate_agent_rationale_277",
+      "community": 7,
+      "norm_label": "entry point: evaluate, save results, and print summary."
+    },
+    {
+      "label": "pareto_curve.py",
+      "file_type": "code",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L1",
+      "id": "evaluation_pareto_curve_py",
+      "community": 2,
+      "norm_label": "pareto_curve.py"
+    },
+    {
+      "label": "EvalPoint",
+      "file_type": "code",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L70",
+      "id": "evaluation_pareto_curve_evalpoint",
+      "community": 2,
+      "norm_label": "evalpoint"
+    },
+    {
+      "label": "NamedTuple",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "namedtuple",
+      "community": 2,
+      "norm_label": "namedtuple"
+    },
+    {
+      "label": "_make_env()",
+      "file_type": "code",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L82",
+      "id": "evaluation_pareto_curve_make_env",
+      "community": 2,
+      "norm_label": "_make_env()"
+    },
+    {
+      "label": "_run_random_policy()",
+      "file_type": "code",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L106",
+      "id": "evaluation_pareto_curve_run_random_policy",
+      "community": 2,
+      "norm_label": "_run_random_policy()"
+    },
+    {
+      "label": "_theoretical_max_comm_rate()",
+      "file_type": "code",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L153",
+      "id": "evaluation_pareto_curve_theoretical_max_comm_rate",
+      "community": 2,
+      "norm_label": "_theoretical_max_comm_rate()"
+    },
+    {
+      "label": "_calibrate_max_sensing_gain()",
+      "file_type": "code",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L167",
+      "id": "evaluation_pareto_curve_calibrate_max_sensing_gain",
+      "community": 2,
+      "norm_label": "_calibrate_max_sensing_gain()"
+    },
+    {
+      "label": "_normalise_loaded_data()",
+      "file_type": "code",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L180",
+      "id": "evaluation_pareto_curve_normalise_loaded_data",
+      "community": 2,
+      "norm_label": "_normalise_loaded_data()"
+    },
+    {
+      "label": "_pareto_frontier()",
+      "file_type": "code",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L195",
+      "id": "evaluation_pareto_curve_pareto_frontier",
+      "community": 2,
+      "norm_label": "_pareto_frontier()"
+    },
+    {
+      "label": "_build_plot()",
+      "file_type": "code",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L252",
+      "id": "evaluation_pareto_curve_build_plot",
+      "community": 2,
+      "norm_label": "_build_plot()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L430",
+      "id": "evaluation_pareto_curve_main",
+      "community": 2,
+      "norm_label": "main()"
+    },
+    {
+      "label": "Pareto frontier analysis for ISAC-MIMO beamforming.  Loads pre-computed evaluati",
+      "file_type": "rationale",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L1",
+      "id": "evaluation_pareto_curve_rationale_1",
+      "community": 2,
+      "norm_label": "pareto frontier analysis for isac-mimo beamforming.  loads pre-computed evaluati"
+    },
+    {
+      "label": "Mean normalised comm-rate and sensing-gain for one operating point.",
+      "file_type": "rationale",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L71",
+      "id": "evaluation_pareto_curve_rationale_71",
+      "community": 2,
+      "norm_label": "mean normalised comm-rate and sensing-gain for one operating point."
+    },
+    {
+      "label": "Build an ISACEnv with the requested alpha/beta weighting.",
+      "file_type": "rationale",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L83",
+      "id": "evaluation_pareto_curve_rationale_83",
+      "community": 2,
+      "norm_label": "build an isacenv with the requested alpha/beta weighting."
+    },
+    {
+      "label": "Roll out a purely random policy and return mean normalised metrics.      Paramet",
+      "file_type": "rationale",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L112",
+      "id": "evaluation_pareto_curve_rationale_112",
+      "community": 2,
+      "norm_label": "roll out a purely random policy and return mean normalised metrics.      paramet"
+    },
+    {
+      "label": "Compute the theoretical maximum communication rate used by ISACEnv.      Replica",
+      "file_type": "rationale",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L154",
+      "id": "evaluation_pareto_curve_rationale_154",
+      "community": 2,
+      "norm_label": "compute the theoretical maximum communication rate used by isacenv.      replica"
+    },
+    {
+      "label": "Return the empirical sensing-gain bound from a fresh ISACEnv.      Instantiating",
+      "file_type": "rationale",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L168",
+      "id": "evaluation_pareto_curve_rationale_168",
+      "community": 2,
+      "norm_label": "return the empirical sensing-gain bound from a fresh isacenv.      instantiating"
+    },
+    {
+      "label": "Normalise raw arrays to [0, 1] and return their scalar means.",
+      "file_type": "rationale",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L186",
+      "id": "evaluation_pareto_curve_rationale_186",
+      "community": 2,
+      "norm_label": "normalise raw arrays to [0, 1] and return their scalar means."
+    },
+    {
+      "label": "Extract and sort the upper-right Pareto frontier from 2-D points.      A point d",
+      "file_type": "rationale",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L199",
+      "id": "evaluation_pareto_curve_rationale_199",
+      "community": 2,
+      "norm_label": "extract and sort the upper-right pareto frontier from 2-d points.      a point d"
+    },
+    {
+      "label": "Assemble the Pareto frontier figure.      Parameters     ----------     sweep_po",
+      "file_type": "rationale",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L257",
+      "id": "evaluation_pareto_curve_rationale_257",
+      "community": 2,
+      "norm_label": "assemble the pareto frontier figure.      parameters     ----------     sweep_po"
+    },
+    {
+      "label": "Load data, run random-policy sweep, build Pareto plot, save.",
+      "file_type": "rationale",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L431",
+      "id": "evaluation_pareto_curve_rationale_431",
+      "community": 2,
+      "norm_label": "load data, run random-policy sweep, build pareto plot, save."
+    },
+    {
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "evaluation/__init__.py",
+      "source_location": "L1",
+      "id": "evaluation_init_py",
+      "community": 18,
+      "norm_label": "__init__.py"
+    },
+    {
+      "label": "plot_results.py",
+      "file_type": "code",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L1",
+      "id": "evaluation_plot_results_py",
+      "community": 3,
+      "norm_label": "plot_results.py"
+    },
+    {
+      "label": "_make_raw_env()",
+      "file_type": "code",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L94",
+      "id": "evaluation_plot_results_make_raw_env",
+      "community": 3,
+      "norm_label": "_make_raw_env()"
+    },
+    {
+      "label": "_load_ddpg_with_vecnorm()",
+      "file_type": "code",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L114",
+      "id": "evaluation_plot_results_load_ddpg_with_vecnorm",
+      "community": 3,
+      "norm_label": "_load_ddpg_with_vecnorm()"
+    },
+    {
+      "label": "_build_fixed_observation()",
+      "file_type": "code",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L145",
+      "id": "evaluation_plot_results_build_fixed_observation",
+      "community": 3,
+      "norm_label": "_build_fixed_observation()"
+    },
+    {
+      "label": "plot_reward_curve()",
+      "file_type": "code",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L167",
+      "id": "evaluation_plot_results_plot_reward_curve",
+      "community": 3,
+      "norm_label": "plot_reward_curve()"
+    },
+    {
+      "label": "plot_sensing_vs_comm()",
+      "file_type": "code",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L257",
+      "id": "evaluation_plot_results_plot_sensing_vs_comm",
+      "community": 3,
+      "norm_label": "plot_sensing_vs_comm()"
+    },
+    {
+      "label": "_compute_array_gain_pattern()",
+      "file_type": "code",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L354",
+      "id": "evaluation_plot_results_compute_array_gain_pattern",
+      "community": 3,
+      "norm_label": "_compute_array_gain_pattern()"
+    },
+    {
+      "label": "_dft_beamformer()",
+      "file_type": "code",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L380",
+      "id": "evaluation_plot_results_dft_beamformer",
+      "community": 3,
+      "norm_label": "_dft_beamformer()"
+    },
+    {
+      "label": "_ddpg_beamformer()",
+      "file_type": "code",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L386",
+      "id": "evaluation_plot_results_ddpg_beamformer",
+      "community": 3,
+      "norm_label": "_ddpg_beamformer()"
+    },
+    {
+      "label": "plot_beampattern()",
+      "file_type": "code",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L409",
+      "id": "evaluation_plot_results_plot_beampattern",
+      "community": 3,
+      "norm_label": "plot_beampattern()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L533",
+      "id": "evaluation_plot_results_main",
+      "community": 3,
+      "norm_label": "main()"
+    },
+    {
+      "label": "Post-training visualisation for ISAC-MIMO beamforming.  Generates three publicat",
+      "file_type": "rationale",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L1",
+      "id": "evaluation_plot_results_rationale_1",
+      "community": 3,
+      "norm_label": "post-training visualisation for isac-mimo beamforming.  generates three publicat"
+    },
+    {
+      "label": "Load the best DDPG checkpoint together with its frozen VecNormalize stats.",
+      "file_type": "rationale",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L115",
+      "id": "evaluation_plot_results_rationale_115",
+      "community": 3,
+      "norm_label": "load the best ddpg checkpoint together with its frozen vecnormalize stats."
+    },
+    {
+      "label": "Construct a deterministic observation at (AoA=30\u00b0, d=100 m, v=60 km/h).      We",
+      "file_type": "rationale",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L146",
+      "id": "evaluation_plot_results_rationale_146",
+      "community": 3,
+      "norm_label": "construct a deterministic observation at (aoa=30\u00b0, d=100 m, v=60 km/h).      we"
+    },
+    {
+      "label": "Load SB3 EvalCallback's ``evaluations.npz`` and plot mean \u00b1 std reward     vs. t",
+      "file_type": "rationale",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L168",
+      "id": "evaluation_plot_results_rationale_168",
+      "community": 3,
+      "norm_label": "load sb3 evalcallback's ``evaluations.npz`` and plot mean \u00b1 std reward     vs. t"
+    },
+    {
+      "label": "Scatter plot of per-episode sensing gain vs. communication rate for the     DDPG",
+      "file_type": "rationale",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L258",
+      "id": "evaluation_plot_results_rationale_258",
+      "community": 3,
+      "norm_label": "scatter plot of per-episode sensing gain vs. communication rate for the     ddpg"
+    },
+    {
+      "label": "Compute the transmit array gain (linear scale) over all angles.      Parameters",
+      "file_type": "rationale",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L359",
+      "id": "evaluation_plot_results_rationale_359",
+      "community": 3,
+      "norm_label": "compute the transmit array gain (linear scale) over all angles.      parameters"
+    },
+    {
+      "label": "Unit-norm DFT steering-vector beamformer at *aoa_deg*.",
+      "file_type": "rationale",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L381",
+      "id": "evaluation_plot_results_rationale_381",
+      "community": 3,
+      "norm_label": "unit-norm dft steering-vector beamformer at *aoa_deg*."
+    },
+    {
+      "label": "Obtain the DDPG agent's deterministic beamformer at the fixed observation.",
+      "file_type": "rationale",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L391",
+      "id": "evaluation_plot_results_rationale_391",
+      "community": 3,
+      "norm_label": "obtain the ddpg agent's deterministic beamformer at the fixed observation."
+    },
+    {
+      "label": "Polar plot of the DDPG agent beam pattern vs. the DFT baseline at AoA=30\u00b0.",
+      "file_type": "rationale",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L410",
+      "id": "evaluation_plot_results_rationale_410",
+      "community": 3,
+      "norm_label": "polar plot of the ddpg agent beam pattern vs. the dft baseline at aoa=30\u00b0."
+    },
+    {
+      "label": "Generate all three result plots.",
+      "file_type": "rationale",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L534",
+      "id": "evaluation_plot_results_rationale_534",
+      "community": 3,
+      "norm_label": "generate all three result plots."
+    },
+    {
+      "label": "ISAC-MIMO-DRL Project",
+      "file_type": "document",
+      "source_file": "README.md",
+      "id": "readme_isac_mimo_drl",
+      "community": 12,
+      "norm_label": "isac-mimo-drl project"
+    },
+    {
+      "label": "uv Dependency Management",
+      "file_type": "document",
+      "source_file": "README.md",
+      "id": "readme_uv",
+      "community": 12,
+      "norm_label": "uv dependency management"
+    },
+    {
+      "label": "ISACEnv (Gymnasium Env)",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "id": "agents_isacenv",
+      "community": 9,
+      "norm_label": "isacenv (gymnasium env)"
+    },
+    {
+      "label": "MIMOSystem (Physics Model)",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "id": "agents_mimosystem",
+      "community": 9,
+      "norm_label": "mimosystem (physics model)"
+    },
+    {
+      "label": "SVChannelModel (Saleh-Valenzuela)",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "id": "agents_svchannelmodel",
+      "community": 9,
+      "norm_label": "svchannelmodel (saleh-valenzuela)"
+    },
+    {
+      "label": "V2XScenario (Vehicle Motion)",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "id": "agents_v2xscenario",
+      "community": 9,
+      "norm_label": "v2xscenario (vehicle motion)"
+    },
+    {
+      "label": "DDPG Training Script",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "id": "agents_train_ddpg",
+      "community": 9,
+      "norm_label": "ddpg training script"
+    },
+    {
+      "label": "VecNormalize Loading Pattern",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "id": "agents_vecnormalize_pattern",
+      "community": 9,
+      "norm_label": "vecnormalize loading pattern"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "main_py",
+      "target": "isac_mimo_drl_main_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "training_train_ddpg_py",
+      "target": "training_train_ddpg_progresscallback",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "training_train_ddpg_py",
+      "target": "training_train_ddpg_noisedecaycallback",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "training_train_ddpg_py",
+      "target": "training_train_ddpg_make_isac_env",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L109",
+      "weight": 1.0,
+      "source": "training_train_ddpg_py",
+      "target": "training_train_ddpg_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "training_train_ddpg_rationale_1",
+      "target": "training_train_ddpg_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "training_train_ddpg_progresscallback",
+      "target": "basecallback",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "training_train_ddpg_progresscallback",
+      "target": "training_train_ddpg_progresscallback_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "training_train_ddpg_progresscallback",
+      "target": "training_train_ddpg_progresscallback_on_step",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L149",
+      "weight": 1.0,
+      "source": "training_train_ddpg_main",
+      "target": "training_train_ddpg_progresscallback",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "training_train_ddpg_rationale_30",
+      "target": "training_train_ddpg_progresscallback",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L19",
+      "weight": 0.8,
+      "source": "training_train_ddpg_progresscallback",
+      "target": "environment_channel_model_svchannelmodel",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L20",
+      "weight": 0.8,
+      "source": "training_train_ddpg_progresscallback",
+      "target": "environment_isac_env_isacenv",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L21",
+      "weight": 0.8,
+      "source": "training_train_ddpg_progresscallback",
+      "target": "environment_mimo_system_mimosystem",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L22",
+      "weight": 0.8,
+      "source": "training_train_ddpg_progresscallback",
+      "target": "environment_v2x_scenario_v2xscenario",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L23",
+      "weight": 0.8,
+      "source": "training_train_ddpg_progresscallback",
+      "target": "utils_reward_config_rewardconfig",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "training_train_ddpg_noisedecaycallback",
+      "target": "basecallback",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "training_train_ddpg_progresscallback_init",
+      "target": "training_train_ddpg_noisedecaycallback_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "training_train_ddpg_noisedecaycallback",
+      "target": "training_train_ddpg_noisedecaycallback_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "training_train_ddpg_noisedecaycallback",
+      "target": "training_train_ddpg_noisedecaycallback_on_step",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L150",
+      "weight": 1.0,
+      "source": "training_train_ddpg_main",
+      "target": "training_train_ddpg_noisedecaycallback",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "training_train_ddpg_rationale_53",
+      "target": "training_train_ddpg_noisedecaycallback",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L19",
+      "weight": 0.8,
+      "source": "training_train_ddpg_noisedecaycallback",
+      "target": "environment_channel_model_svchannelmodel",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L20",
+      "weight": 0.8,
+      "source": "training_train_ddpg_noisedecaycallback",
+      "target": "environment_isac_env_isacenv",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L21",
+      "weight": 0.8,
+      "source": "training_train_ddpg_noisedecaycallback",
+      "target": "environment_mimo_system_mimosystem",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L22",
+      "weight": 0.8,
+      "source": "training_train_ddpg_noisedecaycallback",
+      "target": "environment_v2x_scenario_v2xscenario",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L23",
+      "weight": 0.8,
+      "source": "training_train_ddpg_noisedecaycallback",
+      "target": "utils_reward_config_rewardconfig",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "training_train_ddpg_main",
+      "target": "training_train_ddpg_make_isac_env",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L84",
+      "weight": 1.0,
+      "source": "training_train_ddpg_rationale_84",
+      "target": "training_train_ddpg_make_isac_env",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L85",
+      "weight": 1.0,
+      "source": "training_train_ddpg_make_isac_env",
+      "target": "environment_mimo_system_mimosystem"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "training_train_ddpg_make_isac_env",
+      "target": "environment_v2x_scenario_v2xscenario"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "training_train_ddpg_make_isac_env",
+      "target": "environment_channel_model_svchannelmodel"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "training_train_ddpg_make_isac_env",
+      "target": "utils_reward_config_rewardconfig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "training_train_ddpg_make_isac_env",
+      "target": "environment_isac_env_isacenv"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "training/train_ddpg.py",
+      "source_location": "L110",
+      "weight": 1.0,
+      "source": "training_train_ddpg_rationale_110",
+      "target": "training_train_ddpg_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "training/classical_baseline.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "training_classical_baseline_py",
+      "target": "training_classical_baseline_make_env",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "training/classical_baseline.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "training_classical_baseline_py",
+      "target": "training_classical_baseline_dft_action_for_aoa",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "training/classical_baseline.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "training_classical_baseline_py",
+      "target": "training_classical_baseline_run_baseline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "training/classical_baseline.py",
+      "source_location": "L138",
+      "weight": 1.0,
+      "source": "training_classical_baseline_py",
+      "target": "training_classical_baseline_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "training/classical_baseline.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "training_classical_baseline_rationale_1",
+      "target": "training_classical_baseline_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "training/classical_baseline.py",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "training_classical_baseline_run_baseline",
+      "target": "training_classical_baseline_make_env",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "training/classical_baseline.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "training_classical_baseline_rationale_24",
+      "target": "training_classical_baseline_make_env",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "training/classical_baseline.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "training_classical_baseline_make_env",
+      "target": "environment_mimo_system_mimosystem"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "training/classical_baseline.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "training_classical_baseline_make_env",
+      "target": "environment_v2x_scenario_v2xscenario"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "training/classical_baseline.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "training_classical_baseline_make_env",
+      "target": "environment_channel_model_svchannelmodel"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "training/classical_baseline.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "training_classical_baseline_make_env",
+      "target": "utils_reward_config_rewardconfig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "training/classical_baseline.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "training_classical_baseline_make_env",
+      "target": "environment_isac_env_isacenv"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "training/classical_baseline.py",
+      "source_location": "L105",
+      "weight": 1.0,
+      "source": "training_classical_baseline_run_baseline",
+      "target": "training_classical_baseline_dft_action_for_aoa",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "training/classical_baseline.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "training_classical_baseline_rationale_46",
+      "target": "training_classical_baseline_dft_action_for_aoa",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "training/classical_baseline.py",
+      "source_location": "L144",
+      "weight": 1.0,
+      "source": "training_classical_baseline_main",
+      "target": "training_classical_baseline_run_baseline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "training/classical_baseline.py",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "training_classical_baseline_rationale_68",
+      "target": "training_classical_baseline_run_baseline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "training/classical_baseline.py",
+      "source_location": "L139",
+      "weight": 1.0,
+      "source": "training_classical_baseline_rationale_139",
+      "target": "training_classical_baseline_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_environment.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "tests_test_environment_py",
+      "target": "tests_test_environment_test_environment",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_environment.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "tests_test_environment_rationale_1",
+      "target": "tests_test_environment_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_environment.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "tests_test_environment_rationale_24",
+      "target": "tests_test_environment_test_environment",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_environment.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "tests_test_environment_test_environment",
+      "target": "environment_mimo_system_mimosystem"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_environment.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "tests_test_environment_test_environment",
+      "target": "environment_v2x_scenario_v2xscenario"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_environment.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "tests_test_environment_test_environment",
+      "target": "environment_channel_model_svchannelmodel"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_environment.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "tests_test_environment_test_environment",
+      "target": "utils_reward_config_rewardconfig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_environment.py",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "tests_test_environment_test_environment",
+      "target": "environment_isac_env_isacenv"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/config.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "utils_config_py",
+      "target": "utils_config_get_nvidia_client",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/config.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "utils_config_rationale_1",
+      "target": "utils_config_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/config.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "utils_config_rationale_22",
+      "target": "utils_config_get_nvidia_client",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/reward_config.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "utils_reward_config_py",
+      "target": "utils_reward_config_rewardconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/reward_config.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "utils_reward_config_rationale_1",
+      "target": "utils_reward_config_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/reward_config.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "utils_reward_config_rewardconfig",
+      "target": "utils_reward_config_rewardconfig_dbm_to_linear",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/reward_config.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "utils_reward_config_rationale_9",
+      "target": "utils_reward_config_rewardconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L20",
+      "weight": 0.8,
+      "source": "environment_isac_env_isacenv",
+      "target": "utils_reward_config_rewardconfig",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L40",
+      "weight": 0.8,
+      "source": "evaluation_pareto_curve_evalpoint",
+      "target": "utils_reward_config_rewardconfig",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "evaluation_evaluate_agent_make_isac_env",
+      "target": "utils_reward_config_rewardconfig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L93",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_make_env",
+      "target": "utils_reward_config_rewardconfig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L160",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_theoretical_max_comm_rate",
+      "target": "utils_reward_config_rewardconfig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L104",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_make_raw_env",
+      "target": "utils_reward_config_rewardconfig"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/reward_config.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "utils_reward_config_rationale_30",
+      "target": "utils_reward_config_rewardconfig_dbm_to_linear",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "environment_isac_env_py",
+      "target": "environment_isac_env_isacenv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "environment_isac_env_rationale_1",
+      "target": "environment_isac_env_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "environment_isac_env_isacenv",
+      "target": "environment_isac_env_isacenv_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L139",
+      "weight": 1.0,
+      "source": "environment_isac_env_isacenv",
+      "target": "environment_isac_env_isacenv_calibrate_sensing_bound",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L189",
+      "weight": 1.0,
+      "source": "environment_isac_env_isacenv",
+      "target": "environment_isac_env_isacenv_action_to_beamformer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L222",
+      "weight": 1.0,
+      "source": "environment_isac_env_isacenv",
+      "target": "environment_isac_env_isacenv_get_observation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L246",
+      "weight": 1.0,
+      "source": "environment_isac_env_isacenv",
+      "target": "environment_isac_env_isacenv_communication_rate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L276",
+      "weight": 1.0,
+      "source": "environment_isac_env_isacenv",
+      "target": "environment_isac_env_isacenv_sensing_gain",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L295",
+      "weight": 1.0,
+      "source": "environment_isac_env_isacenv",
+      "target": "environment_isac_env_isacenv_normalise",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L317",
+      "weight": 1.0,
+      "source": "environment_isac_env_isacenv",
+      "target": "environment_isac_env_isacenv_reset",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L349",
+      "weight": 1.0,
+      "source": "environment_isac_env_isacenv",
+      "target": "environment_isac_env_isacenv_step",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L407",
+      "weight": 1.0,
+      "source": "environment_isac_env_isacenv",
+      "target": "environment_isac_env_isacenv_render",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "environment_isac_env_rationale_24",
+      "target": "environment_isac_env_isacenv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L17",
+      "weight": 0.8,
+      "source": "environment_isac_env_isacenv",
+      "target": "environment_channel_model_svchannelmodel",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L18",
+      "weight": 0.8,
+      "source": "environment_isac_env_isacenv",
+      "target": "environment_mimo_system_mimosystem",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L19",
+      "weight": 0.8,
+      "source": "environment_isac_env_isacenv",
+      "target": "environment_v2x_scenario_v2xscenario",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L37",
+      "weight": 0.8,
+      "source": "evaluation_pareto_curve_evalpoint",
+      "target": "environment_isac_env_isacenv",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "evaluation_evaluate_agent_make_isac_env",
+      "target": "environment_isac_env_isacenv"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_make_env",
+      "target": "environment_isac_env_isacenv"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L105",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_make_raw_env",
+      "target": "environment_isac_env_isacenv"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L131",
+      "weight": 1.0,
+      "source": "environment_isac_env_isacenv_init",
+      "target": "environment_isac_env_isacenv_calibrate_sensing_bound",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L163",
+      "weight": 1.0,
+      "source": "environment_isac_env_isacenv_calibrate_sensing_bound",
+      "target": "environment_isac_env_isacenv_reset",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L170",
+      "weight": 1.0,
+      "source": "environment_isac_env_isacenv_calibrate_sensing_bound",
+      "target": "environment_isac_env_isacenv_action_to_beamformer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L175",
+      "weight": 1.0,
+      "source": "environment_isac_env_isacenv_calibrate_sensing_bound",
+      "target": "environment_isac_env_isacenv_step",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L140",
+      "weight": 1.0,
+      "source": "environment_isac_env_rationale_140",
+      "target": "environment_isac_env_isacenv_calibrate_sensing_bound",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L366",
+      "weight": 1.0,
+      "source": "environment_isac_env_isacenv_step",
+      "target": "environment_isac_env_isacenv_action_to_beamformer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L190",
+      "weight": 1.0,
+      "source": "environment_isac_env_rationale_190",
+      "target": "environment_isac_env_isacenv_action_to_beamformer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L345",
+      "weight": 1.0,
+      "source": "environment_isac_env_isacenv_reset",
+      "target": "environment_isac_env_isacenv_get_observation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L404",
+      "weight": 1.0,
+      "source": "environment_isac_env_isacenv_step",
+      "target": "environment_isac_env_isacenv_get_observation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L223",
+      "weight": 1.0,
+      "source": "environment_isac_env_rationale_223",
+      "target": "environment_isac_env_isacenv_get_observation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L371",
+      "weight": 1.0,
+      "source": "environment_isac_env_isacenv_step",
+      "target": "environment_isac_env_isacenv_communication_rate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L247",
+      "weight": 1.0,
+      "source": "environment_isac_env_rationale_247",
+      "target": "environment_isac_env_isacenv_communication_rate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L372",
+      "weight": 1.0,
+      "source": "environment_isac_env_isacenv_step",
+      "target": "environment_isac_env_isacenv_sensing_gain",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L277",
+      "weight": 1.0,
+      "source": "environment_isac_env_rationale_277",
+      "target": "environment_isac_env_isacenv_sensing_gain",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L375",
+      "weight": 1.0,
+      "source": "environment_isac_env_isacenv_step",
+      "target": "environment_isac_env_isacenv_normalise",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L296",
+      "weight": 1.0,
+      "source": "environment_isac_env_rationale_296",
+      "target": "environment_isac_env_isacenv_normalise",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L318",
+      "weight": 1.0,
+      "source": "environment_isac_env_rationale_318",
+      "target": "environment_isac_env_isacenv_reset",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L350",
+      "weight": 1.0,
+      "source": "environment_isac_env_rationale_350",
+      "target": "environment_isac_env_isacenv_step",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/isac_env.py",
+      "source_location": "L408",
+      "weight": 1.0,
+      "source": "environment_isac_env_rationale_408",
+      "target": "environment_isac_env_isacenv_render",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "environment_mimo_system_py",
+      "target": "environment_mimo_system_mimosystem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "environment_mimo_system_rationale_1",
+      "target": "environment_mimo_system_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "environment_mimo_system_mimosystem",
+      "target": "environment_mimo_system_mimosystem_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "environment_mimo_system_mimosystem",
+      "target": "environment_mimo_system_mimosystem_steering_vector",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "environment_mimo_system_mimosystem",
+      "target": "environment_mimo_system_mimosystem_tx_steering_vector",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L80",
+      "weight": 1.0,
+      "source": "environment_mimo_system_mimosystem",
+      "target": "environment_mimo_system_mimosystem_rx_steering_vector",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L99",
+      "weight": 1.0,
+      "source": "environment_mimo_system_mimosystem",
+      "target": "environment_mimo_system_mimosystem_init_beamformer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L126",
+      "weight": 1.0,
+      "source": "environment_mimo_system_mimosystem",
+      "target": "environment_mimo_system_mimosystem_array_gain",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "environment_mimo_system_rationale_7",
+      "target": "environment_mimo_system_mimosystem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "environment/channel_model.py",
+      "source_location": "L14",
+      "weight": 0.8,
+      "source": "environment_channel_model_svchannelmodel",
+      "target": "environment_mimo_system_mimosystem",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L38",
+      "weight": 0.8,
+      "source": "evaluation_pareto_curve_evalpoint",
+      "target": "environment_mimo_system_mimosystem",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "evaluation_evaluate_agent_make_isac_env",
+      "target": "environment_mimo_system_mimosystem"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L84",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_make_env",
+      "target": "environment_mimo_system_mimosystem"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_make_raw_env",
+      "target": "environment_mimo_system_mimosystem"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "environment_mimo_system_mimosystem_tx_steering_vector",
+      "target": "environment_mimo_system_mimosystem_steering_vector",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "environment_mimo_system_mimosystem_rx_steering_vector",
+      "target": "environment_mimo_system_mimosystem_steering_vector",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "environment_mimo_system_rationale_44",
+      "target": "environment_mimo_system_mimosystem_steering_vector",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L147",
+      "weight": 1.0,
+      "source": "environment_mimo_system_mimosystem_array_gain",
+      "target": "environment_mimo_system_mimosystem_tx_steering_vector",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "environment_mimo_system_rationale_65",
+      "target": "environment_mimo_system_mimosystem_tx_steering_vector",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "environment_mimo_system_rationale_81",
+      "target": "environment_mimo_system_mimosystem_rx_steering_vector",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "environment_mimo_system_rationale_100",
+      "target": "environment_mimo_system_mimosystem_init_beamformer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/mimo_system.py",
+      "source_location": "L131",
+      "weight": 1.0,
+      "source": "environment_mimo_system_rationale_131",
+      "target": "environment_mimo_system_mimosystem_array_gain",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/v2x_scenario.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "environment_v2x_scenario_py",
+      "target": "environment_v2x_scenario_v2xscenario",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/v2x_scenario.py",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "environment_v2x_scenario_py",
+      "target": "environment_v2x_scenario_current_state",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/v2x_scenario.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "environment_v2x_scenario_rationale_1",
+      "target": "environment_v2x_scenario_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/v2x_scenario.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "environment_v2x_scenario_v2xscenario",
+      "target": "environment_v2x_scenario_v2xscenario_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/v2x_scenario.py",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "environment_v2x_scenario_v2xscenario",
+      "target": "environment_v2x_scenario_v2xscenario_vehicle_position",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/v2x_scenario.py",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "environment_v2x_scenario_v2xscenario",
+      "target": "environment_v2x_scenario_v2xscenario_recompute_geometry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/v2x_scenario.py",
+      "source_location": "L119",
+      "weight": 1.0,
+      "source": "environment_v2x_scenario_v2xscenario",
+      "target": "environment_v2x_scenario_v2xscenario_step",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/v2x_scenario.py",
+      "source_location": "L139",
+      "weight": 1.0,
+      "source": "environment_v2x_scenario_v2xscenario",
+      "target": "environment_v2x_scenario_v2xscenario_reset",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/v2x_scenario.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "environment_v2x_scenario_rationale_17",
+      "target": "environment_v2x_scenario_v2xscenario",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L39",
+      "weight": 0.8,
+      "source": "evaluation_pareto_curve_evalpoint",
+      "target": "environment_v2x_scenario_v2xscenario",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "evaluation_evaluate_agent_make_isac_env",
+      "target": "environment_v2x_scenario_v2xscenario"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L85",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_make_env",
+      "target": "environment_v2x_scenario_v2xscenario"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_make_raw_env",
+      "target": "environment_v2x_scenario_v2xscenario"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/v2x_scenario.py",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "environment_v2x_scenario_v2xscenario_recompute_geometry",
+      "target": "environment_v2x_scenario_v2xscenario_vehicle_position",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/v2x_scenario.py",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "environment_v2x_scenario_rationale_68",
+      "target": "environment_v2x_scenario_v2xscenario_vehicle_position",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/v2x_scenario.py",
+      "source_location": "L112",
+      "weight": 1.0,
+      "source": "environment_v2x_scenario_current_state",
+      "target": "environment_v2x_scenario_v2xscenario_recompute_geometry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/v2x_scenario.py",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "environment_v2x_scenario_rationale_79",
+      "target": "environment_v2x_scenario_v2xscenario_recompute_geometry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/v2x_scenario.py",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "environment_v2x_scenario_rationale_120",
+      "target": "environment_v2x_scenario_v2xscenario_step",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/v2x_scenario.py",
+      "source_location": "L140",
+      "weight": 1.0,
+      "source": "environment_v2x_scenario_rationale_140",
+      "target": "environment_v2x_scenario_v2xscenario_reset",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/channel_model.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "environment_channel_model_py",
+      "target": "environment_channel_model_svchannelmodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/channel_model.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "environment_channel_model_rationale_1",
+      "target": "environment_channel_model_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/channel_model.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "environment_channel_model_svchannelmodel",
+      "target": "environment_channel_model_svchannelmodel_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/channel_model.py",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "environment_channel_model_svchannelmodel",
+      "target": "environment_channel_model_svchannelmodel_steering_tx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/channel_model.py",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "environment_channel_model_svchannelmodel",
+      "target": "environment_channel_model_svchannelmodel_steering_rx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/channel_model.py",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "environment_channel_model_svchannelmodel",
+      "target": "environment_channel_model_svchannelmodel_generate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/channel_model.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "environment_channel_model_rationale_18",
+      "target": "environment_channel_model_svchannelmodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L36",
+      "weight": 0.8,
+      "source": "evaluation_pareto_curve_evalpoint",
+      "target": "environment_channel_model_svchannelmodel",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "evaluation_evaluate_agent_make_isac_env",
+      "target": "environment_channel_model_svchannelmodel"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_make_env",
+      "target": "environment_channel_model_svchannelmodel"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_make_raw_env",
+      "target": "environment_channel_model_svchannelmodel"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/channel_model.py",
+      "source_location": "L145",
+      "weight": 1.0,
+      "source": "environment_channel_model_svchannelmodel_generate",
+      "target": "environment_channel_model_svchannelmodel_steering_tx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/channel_model.py",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "environment_channel_model_rationale_95",
+      "target": "environment_channel_model_svchannelmodel_steering_tx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/channel_model.py",
+      "source_location": "L144",
+      "weight": 1.0,
+      "source": "environment_channel_model_svchannelmodel_generate",
+      "target": "environment_channel_model_svchannelmodel_steering_rx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/channel_model.py",
+      "source_location": "L99",
+      "weight": 1.0,
+      "source": "environment_channel_model_rationale_99",
+      "target": "environment_channel_model_svchannelmodel_steering_rx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "environment/channel_model.py",
+      "source_location": "L107",
+      "weight": 1.0,
+      "source": "environment_channel_model_rationale_107",
+      "target": "environment_channel_model_svchannelmodel_generate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "evaluation_evaluate_agent_py",
+      "target": "evaluation_evaluate_agent_make_isac_env",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "evaluation_evaluate_agent_py",
+      "target": "evaluation_evaluate_agent_debug_policy_probe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L142",
+      "weight": 1.0,
+      "source": "evaluation_evaluate_agent_py",
+      "target": "evaluation_evaluate_agent_evaluate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L249",
+      "weight": 1.0,
+      "source": "evaluation_evaluate_agent_py",
+      "target": "evaluation_evaluate_agent_print_summary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L276",
+      "weight": 1.0,
+      "source": "evaluation_evaluate_agent_py",
+      "target": "evaluation_evaluate_agent_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "evaluation_evaluate_agent_rationale_1",
+      "target": "evaluation_evaluate_agent_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L177",
+      "weight": 1.0,
+      "source": "evaluation_evaluate_agent_evaluate",
+      "target": "evaluation_evaluate_agent_make_isac_env",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "evaluation_evaluate_agent_rationale_53",
+      "target": "evaluation_evaluate_agent_make_isac_env",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L196",
+      "weight": 1.0,
+      "source": "evaluation_evaluate_agent_evaluate",
+      "target": "evaluation_evaluate_agent_debug_policy_probe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "evaluation_evaluate_agent_rationale_77",
+      "target": "evaluation_evaluate_agent_debug_policy_probe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L280",
+      "weight": 1.0,
+      "source": "evaluation_evaluate_agent_main",
+      "target": "evaluation_evaluate_agent_evaluate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L143",
+      "weight": 1.0,
+      "source": "evaluation_evaluate_agent_rationale_143",
+      "target": "evaluation_evaluate_agent_evaluate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L286",
+      "weight": 1.0,
+      "source": "evaluation_evaluate_agent_main",
+      "target": "evaluation_evaluate_agent_print_summary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L250",
+      "weight": 1.0,
+      "source": "evaluation_evaluate_agent_rationale_250",
+      "target": "evaluation_evaluate_agent_print_summary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/evaluate_agent.py",
+      "source_location": "L277",
+      "weight": 1.0,
+      "source": "evaluation_evaluate_agent_rationale_277",
+      "target": "evaluation_evaluate_agent_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_py",
+      "target": "evaluation_pareto_curve_evalpoint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_py",
+      "target": "evaluation_pareto_curve_make_env",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_py",
+      "target": "evaluation_pareto_curve_run_random_policy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L153",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_py",
+      "target": "evaluation_pareto_curve_theoretical_max_comm_rate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L167",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_py",
+      "target": "evaluation_pareto_curve_calibrate_max_sensing_gain",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L180",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_py",
+      "target": "evaluation_pareto_curve_normalise_loaded_data",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L195",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_py",
+      "target": "evaluation_pareto_curve_pareto_frontier",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L252",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_py",
+      "target": "evaluation_pareto_curve_build_plot",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L430",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_py",
+      "target": "evaluation_pareto_curve_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_rationale_1",
+      "target": "evaluation_pareto_curve_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_evalpoint",
+      "target": "namedtuple",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L458",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_main",
+      "target": "evaluation_pareto_curve_evalpoint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_rationale_71",
+      "target": "evaluation_pareto_curve_evalpoint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L131",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_run_random_policy",
+      "target": "evaluation_pareto_curve_make_env",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L174",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_calibrate_max_sensing_gain",
+      "target": "evaluation_pareto_curve_make_env",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_rationale_83",
+      "target": "evaluation_pareto_curve_make_env",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L487",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_main",
+      "target": "evaluation_pareto_curve_run_random_policy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L112",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_rationale_112",
+      "target": "evaluation_pareto_curve_run_random_policy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L438",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_main",
+      "target": "evaluation_pareto_curve_theoretical_max_comm_rate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L154",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_rationale_154",
+      "target": "evaluation_pareto_curve_theoretical_max_comm_rate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L439",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_main",
+      "target": "evaluation_pareto_curve_calibrate_max_sensing_gain",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L168",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_rationale_168",
+      "target": "evaluation_pareto_curve_calibrate_max_sensing_gain",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L452",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_main",
+      "target": "evaluation_pareto_curve_normalise_loaded_data",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L186",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_rationale_186",
+      "target": "evaluation_pareto_curve_normalise_loaded_data",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L283",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_build_plot",
+      "target": "evaluation_pareto_curve_pareto_frontier",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L199",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_rationale_199",
+      "target": "evaluation_pareto_curve_pareto_frontier",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L503",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_main",
+      "target": "evaluation_pareto_curve_build_plot",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L257",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_rationale_257",
+      "target": "evaluation_pareto_curve_build_plot",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/pareto_curve.py",
+      "source_location": "L431",
+      "weight": 1.0,
+      "source": "evaluation_pareto_curve_rationale_431",
+      "target": "evaluation_pareto_curve_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_py",
+      "target": "evaluation_plot_results_make_raw_env",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L114",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_py",
+      "target": "evaluation_plot_results_load_ddpg_with_vecnorm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L145",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_py",
+      "target": "evaluation_plot_results_build_fixed_observation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L167",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_py",
+      "target": "evaluation_plot_results_plot_reward_curve",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L257",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_py",
+      "target": "evaluation_plot_results_plot_sensing_vs_comm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L354",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_py",
+      "target": "evaluation_plot_results_compute_array_gain_pattern",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L380",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_py",
+      "target": "evaluation_plot_results_dft_beamformer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L386",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_py",
+      "target": "evaluation_plot_results_ddpg_beamformer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L409",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_py",
+      "target": "evaluation_plot_results_plot_beampattern",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L533",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_py",
+      "target": "evaluation_plot_results_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_rationale_1",
+      "target": "evaluation_plot_results_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L135",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_load_ddpg_with_vecnorm",
+      "target": "evaluation_plot_results_make_raw_env",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L418",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_plot_beampattern",
+      "target": "evaluation_plot_results_load_ddpg_with_vecnorm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_rationale_115",
+      "target": "evaluation_plot_results_load_ddpg_with_vecnorm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L398",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_ddpg_beamformer",
+      "target": "evaluation_plot_results_build_fixed_observation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L146",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_rationale_146",
+      "target": "evaluation_plot_results_build_fixed_observation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L542",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_main",
+      "target": "evaluation_plot_results_plot_reward_curve",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L168",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_rationale_168",
+      "target": "evaluation_plot_results_plot_reward_curve",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L545",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_main",
+      "target": "evaluation_plot_results_plot_sensing_vs_comm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L258",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_rationale_258",
+      "target": "evaluation_plot_results_plot_sensing_vs_comm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L430",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_plot_beampattern",
+      "target": "evaluation_plot_results_compute_array_gain_pattern",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L359",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_rationale_359",
+      "target": "evaluation_plot_results_compute_array_gain_pattern",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L429",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_plot_beampattern",
+      "target": "evaluation_plot_results_dft_beamformer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L381",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_rationale_381",
+      "target": "evaluation_plot_results_dft_beamformer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L433",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_plot_beampattern",
+      "target": "evaluation_plot_results_ddpg_beamformer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L391",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_rationale_391",
+      "target": "evaluation_plot_results_ddpg_beamformer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L548",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_main",
+      "target": "evaluation_plot_results_plot_beampattern",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L410",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_rationale_410",
+      "target": "evaluation_plot_results_plot_beampattern",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "evaluation/plot_results.py",
+      "source_location": "L534",
+      "weight": 1.0,
+      "source": "evaluation_plot_results_rationale_534",
+      "target": "evaluation_plot_results_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source": "readme_isac_mimo_drl",
+      "target": "readme_uv"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source": "agents_isacenv",
+      "target": "agents_mimosystem"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source": "agents_isacenv",
+      "target": "agents_svchannelmodel"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source": "agents_isacenv",
+      "target": "agents_v2xscenario"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source": "agents_train_ddpg",
+      "target": "agents_isacenv"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "AGENTS.md",
+      "source": "agents_vecnormalize_pattern",
+      "target": "agents_train_ddpg"
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "5fa519999727652f6e66b1a39666abdb12ad7e39"
+}
