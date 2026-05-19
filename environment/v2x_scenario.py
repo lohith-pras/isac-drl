@@ -8,7 +8,6 @@ velocity        : float  (m/s, scalar along the line)
 angle_of_arrival: float  (degrees, measured from +x axis to vehicle)
 """
 
-import math
 
 import numpy as np
 

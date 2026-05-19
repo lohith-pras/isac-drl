@@ -34,12 +34,13 @@ build-backend = "hatchling.build"
 [tool.ruff]
 line-length = 100
 target-version = "py311"
+exclude = ["notebooks", "scratch", "graphify-out", ".agents"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "W"]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/isac_mimo_drl"]
+packages = ["environment", "training", "utils", "evaluation"]
 
 [dependency-groups]
 dev = [

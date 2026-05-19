@@ -21,6 +21,7 @@ or
 from __future__ import annotations
 
 import sys
+
 sys.path.insert(0, '/content/isac-mimo-drl')
 
 import math
@@ -28,9 +29,9 @@ from pathlib import Path
 from typing import NamedTuple
 
 import matplotlib
+
 matplotlib.use("Agg")  # headless rendering – no display required
 import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
 import numpy as np
 
 from environment.channel_model import SVChannelModel
@@ -38,7 +39,6 @@ from environment.isac_env import ISACEnv
 from environment.mimo_system import MIMOSystem
 from environment.v2x_scenario import V2XScenario
 from utils.reward_config import RewardConfig
-
 
 # ---------------------------------------------------------------------------
 # Paths
@@ -515,7 +515,11 @@ def main() -> None:
         print(f"  {pt.label:<20} {pt.comm_norm:>10.4f} {pt.sens_norm:>10.4f}")
     print("-" * 44)
     print(f"  {'DDPG agent':<20} {ddpg_point.comm_norm:>10.4f} {ddpg_point.sens_norm:>10.4f}")
-    print(f"  {'DFT baseline':<20} {baseline_point.comm_norm:>10.4f} {baseline_point.sens_norm:>10.4f}")
+    print(
+        f"  {'DFT baseline':<20} "
+        f"{baseline_point.comm_norm:>10.4f} "
+        f"{baseline_point.sens_norm:>10.4f}"
+    )
     print("=" * 60)
 
 

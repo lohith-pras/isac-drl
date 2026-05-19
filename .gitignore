@@ -8,3 +8,13 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Workspace / Cache
+.hermes/
+.ruff_cache/
+.pytest_cache/
+models/*.zip
+*.npy
+graphify-out/
+.agents/
+.env

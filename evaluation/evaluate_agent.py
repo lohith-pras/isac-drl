@@ -16,9 +16,6 @@ or
 
 from __future__ import annotations
 
-import sys
-sys.path.insert(0, '/content/isac-mimo-drl')
-
 from pathlib import Path
 
 import numpy as np
@@ -31,7 +28,6 @@ from environment.isac_env import ISACEnv
 from environment.mimo_system import MIMOSystem
 from environment.v2x_scenario import V2XScenario
 from utils.reward_config import RewardConfig
-
 
 # ---------------------------------------------------------------------------
 # Paths
@@ -117,7 +113,7 @@ def _debug_policy_probe(model: DDPG, vec_env: VecNormalize, n_steps: int = 5) ->
             changed = "CHANGED  ✓" if delta > 1e-6 else "STATIC   ✗"
             print(f"    Δ vs prev  : {delta:.6f}  →  {changed}")
         else:
-            print(f"    Δ vs prev  : — (first step)")
+            print("    Δ vs prev  : — (first step)")
 
         prev_action = raw_action.copy()
         obs, _, done_arr, _ = vec_env.step(action)

@@ -7,7 +7,6 @@ number of dominant clusters, each containing several sub-paths (rays).
 It is suitable for V2X and ISAC simulations.
 """
 import math
-from typing import List, Tuple
 
 import numpy as np
 
@@ -61,6 +60,8 @@ class SVChannelModel:
         rays_per_cluster: int = 10,
         azimuth_spread_deg: float = 10.0,
         rng: np.random.Generator | None = None,
+        coherent: bool = False,
+        update_interval: float = 0.1,
     ):
         self.mimo = mimo
         self.distance = distance
@@ -68,6 +69,8 @@ class SVChannelModel:
         self.rays_per_cluster = rays_per_cluster
         self.azimuth_spread_deg = azimuth_spread_deg
         self.rng = rng if rng is not None else np.random.default_rng()
+        self.coherent = coherent
+        self.update_interval = update_interval
 
         self.Nt = mimo.Nt
         self.Nr = mimo.Nr
@@ -87,9 +90,29 @@ class SVChannelModel:
             / math.sqrt(2.0)
         )
 
+        # Ray offsets (initialised in reset_coherent if in coherent mode)
+        self._ray_aoa_offsets = np.zeros((num_clusters, rays_per_cluster))
+        self._ray_aod_offsets = np.zeros((num_clusters, rays_per_cluster))
+        self._t = 0.0
+
+        if self.coherent:
+            self.reset_coherent()
+
     # ------------------------------------------------------------------
     # Helpers
     # ------------------------------------------------------------------
+
+    def reset_coherent(self) -> None:
+        """
+        Sample and store ray-level parameters for coherent evolution.
+        """
+        self._ray_aoa_offsets = self.rng.normal(
+            0.0, self.azimuth_spread_deg, size=(self.num_clusters, self.rays_per_cluster)
+        )
+        self._ray_aod_offsets = self.rng.normal(
+            0.0, self.azimuth_spread_deg, size=(self.num_clusters, self.rays_per_cluster)
+        )
+        self._t = 0.0
 
     def _steering_tx(self, angle_deg: float) -> np.ndarray:
         """Return the transmit steering vector for *angle_deg*."""
@@ -103,7 +126,7 @@ class SVChannelModel:
     # Channel matrix generator
     # ------------------------------------------------------------------
 
-    def generate(self, velocity_ms: float = 0.0) -> np.ndarray:
+    def generate(self, velocity_ms: float = 0.0, distance: float | None = None) -> np.ndarray:
         """
         Generate the complex channel matrix **H**.
 
@@ -115,7 +138,10 @@ class SVChannelModel:
         velocity_ms : float, optional
             Relative radial velocity in m/s.  A positive value means
             the transmitter and receiver are moving toward each other.
-            Doppler shift is applied uniformly to all paths.
+            In coherent mode, this evolves the phase of each ray.
+        distance : float, optional
+            Current transmitter--receiver distance. If None, uses the
+            default distance from initialisation.
 
         Returns
         -------
@@ -125,6 +151,10 @@ class SVChannelModel:
         # Start with zero matrix
         H = np.zeros((self.Nr, self.Nt), dtype=complex)
 
+        if self.coherent:
+            # Advance internal time
+            self._t += self.update_interval
+
         # Loop over clusters and rays
         for c in range(self.num_clusters):
             # Mean angles for this cluster
@@ -133,10 +163,14 @@ class SVChannelModel:
 
             for r in range(self.rays_per_cluster):
                 # ------------------------------------------------------------
-                # 1. Per-ray angles (Laplace / Gaussian spread around mean)
+                # 1. Per-ray angles
                 # ------------------------------------------------------------
-                aoa = mean_aoa + self.rng.normal(0.0, self.azimuth_spread_deg)
-                aod = mean_aod + self.rng.normal(0.0, self.azimuth_spread_deg)
+                if self.coherent:
+                    aoa = mean_aoa + self._ray_aoa_offsets[c, r]
+                    aod = mean_aod + self._ray_aod_offsets[c, r]
+                else:
+                    aoa = mean_aoa + self.rng.normal(0.0, self.azimuth_spread_deg)
+                    aod = mean_aod + self.rng.normal(0.0, self.azimuth_spread_deg)
 
                 # ------------------------------------------------------------
                 # 2. Steering vectors
@@ -148,31 +182,33 @@ class SVChannelModel:
                 # 3. Outer product a_r * a_t^H  =>  (Nr, Nt) contribution
                 # ------------------------------------------------------------
                 path_gain = self._path_gains[c, r]
+
+                # ------------------------------------------------------------
+                # 4. Doppler shift (if velocity is non-zero)
+                # ------------------------------------------------------------
+                if abs(velocity_ms) > 1e-6:
+                    # fd = v/lambda * cos(theta)
+                    fd = (velocity_ms / self.mimo._wavelength) * math.cos(math.radians(aoa))
+                    # In random mode, we use t=1 for backward compatibility
+                    t_val = self._t if self.coherent else 1.0
+                    doppler_phase = 2j * math.pi * fd * t_val
+                    path_gain *= np.exp(doppler_phase)
+
                 H += path_gain * np.outer(ar, at.conj())
 
         # ------------------------------------------------------------------
-        # 4. Normalise so that E[||H||_F^2] = Nt * Nr  (standard convention)
+        # 5. Normalise so that E[||H||_F^2] = Nt * Nr  (standard convention)
         # ------------------------------------------------------------------
         # The inner double sum has L independent CN(0,1) terms.
         normalisation = math.sqrt(self.Nt * self.Nr / self.num_paths)
         H *= normalisation
 
         # ------------------------------------------------------------------
-        # 5. Large-scale path loss
+        # 6. Large-scale path loss
         # ------------------------------------------------------------------
-        # Free-space PL ~ (4πd/λ)^2  =>  amplitude attenuation 1/d
-        # We scale H by 1 / distance to keep the model simple.
-        H /= math.sqrt(self.distance)
-
-        # ------------------------------------------------------------------
-        # 6. Doppler shift (if velocity is non-zero)
-        # ------------------------------------------------------------------
-        if abs(velocity_ms) > 1e-6:
-            # Maximum Doppler shift fd = v / c * fc
-            # We apply a common phase rotation for simplicity.
-            fd = velocity_ms / 3e8 * self.mimo.carrier_freq
-            # Phase term for a single coherence time (t=1 here for simplicity)
-            doppler_phase = 2j * math.pi * fd
-            H *= np.exp(doppler_phase)
+        # Free-space PL ~ (4πd/λ)^2  =>  amplitude attenuation λ / (4πd)
+        d = distance if distance is not None else self.distance
+        pl_amplitude = self.mimo._wavelength / (4 * math.pi * max(d, 0.1))
+        H *= pl_amplitude
 
         return H

@@ -8,8 +8,6 @@ information.  No external test framework is used.
 import sys
 from pathlib import Path
 
-import numpy as np
-
 # Ensure the project root is on the path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 

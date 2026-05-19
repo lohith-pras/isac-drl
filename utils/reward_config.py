@@ -1,6 +1,5 @@
 """Reward configuration dataclass for ISAC-MIMO-DRL."""
 
-import math
 from dataclasses import dataclass
 
 

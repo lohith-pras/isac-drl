@@ -38,16 +38,15 @@ class ISACEnv(gym.Env):
 
     Reward
     ------
-    Reward is computed using fixed theoretical-bound normalisation:
-    ``alpha * N_comm + beta * N_sens``
-    where both terms are clipped to [0, 1].
+    Reward uses fixed theoretical-bound normalisation:
+    ``alpha * N_comm + beta * N_sens``, each in [0, 1].
 
     * ``N_comm = clip(comm_rate / max_comm_rate, 0, 1)``
-      ``max_comm_rate = log2(1 + SNR_max * Nt * Nr)``
-      ``SNR_max       = tx_power_linear / noise_power_linear``
-    * ``N_sens = clip(array_gain / _max_sensing_gain, 0, 1)``
-      ``_max_sensing_gain`` is calibrated empirically at init time by
-      sampling 500 random actions and taking the peak × 1.2 (20% headroom).
+      ``max_comm_rate`` is the Shannon capacity under ideal conditions.
+    * ``N_sens = |w^H · a(AoA)|^2 / (||w||^2 * Nt)``
+      This is the squared cosine similarity between the beamforming
+      vector ``w`` and the steering vector ``a(AoA)`` — a clean
+      geometric measure of how much energy points at the target.
 
     Parameters
     ----------
@@ -122,65 +121,9 @@ class ISACEnv(gym.Env):
         self._max_comm_rate: float = math.log2(1.0 + max_snr)
 
         # ------------------------------------------------------------------
-        # Calibrate sensing bound via 500 random-action rollout
-        #
-        # The theoretical Nt² bound ignores path-loss and channel power
-        # embedded in the raw array_gain, so we measure the empirical peak
-        # and add 20 % headroom to keep sens_norm in a useful [0, 1] range.
+        # Max transmit power (linear) for normalisation
         # ------------------------------------------------------------------
-        self._max_sensing_gain: float = self._calibrate_sensing_bound(
-            n_samples=500, headroom=1.2
-        )
-
-    # ------------------------------------------------------------------
-    # Calibration
-    # ------------------------------------------------------------------
-
-    def _calibrate_sensing_bound(self, n_samples: int = 500, headroom: float = 1.2) -> float:
-        """
-        Estimate an empirical upper bound for the raw sensing gain.
-
-        Bootstraps a temporary environment state, samples ``n_samples``
-        random beamforming actions, records the maximum raw sensing gain
-        observed, then returns that peak scaled by ``headroom``.
-
-        Parameters
-        ----------
-        n_samples : int
-            Number of random actions to evaluate (default 500).
-        headroom : float
-            Multiplicative safety margin applied to the observed peak
-            (default 1.2, i.e. 20 %).
-
-        Returns
-        -------
-        float
-            Calibrated sensing bound with headroom applied.
-        """
-        rng = np.random.default_rng(seed=0)
-
-        # Bootstrap temporary state so _sensing_gain() can be called
-        self._state = self.scenario.reset()
-        self._H = self.channel.generate(velocity_ms=self._state["velocity"])
-
-        peak = 0.0
-        for _ in range(n_samples):
-            # Sample a random action in [-1, 1]^(2*Nt)
-            action = rng.uniform(-1.0, 1.0, size=self.action_space.shape)
-            w = self._action_to_beamformer(action)
-            gain = self.mimo.array_gain(w, self._state["angle_of_arrival"])
-            if gain > peak:
-                peak = gain
-            # Advance scenario so AoA varies across the calibration sweep
-            self._state = self.scenario.step()
-            self._H = self.channel.generate(velocity_ms=self._state["velocity"])
-
-        # Tear down temporary state; reset() will re-initialise properly
-        self._state = {}
-        self._H = None
-        self._current_step = 0
-
-        return float(peak * headroom)
+        self._max_tx_power_linear = tx_power_linear
 
     # ------------------------------------------------------------------
     # Helpers
@@ -275,7 +218,7 @@ class ISACEnv(gym.Env):
 
     def _sensing_gain(self, w: np.ndarray) -> float:
         """
-        Compute the raw array-gain toward the current AoA.
+        Compute the normalised sensing reward using squared cosine similarity.
 
         Parameters
         ----------
@@ -285,12 +228,17 @@ class ISACEnv(gym.Env):
         Returns
         -------
         float
-            Raw array gain (unnormalised).  Normalisation against the
-            theoretical peak (``Nt²``) is performed in ``step()``.
+            Normalised sensing reward in [0, 1].
         """
         assert self._state is not None
         aoa = self._state["angle_of_arrival"]
-        return self.mimo.array_gain(w, aoa)
+        gain = self.mimo.array_gain(w, aoa)
+
+        # Normalise by (||w||^2 * ||a||^2)
+        # ||w||^2 = self._max_tx_power_linear
+        # ||a||^2 = self.Nt
+        norm = self._max_tx_power_linear * self.Nt
+        return float(np.clip(gain / max(norm, 1e-12), 0.0, 1.0))
 
     def _normalise(self, value: float, bound: float) -> float:
         """
@@ -314,7 +262,12 @@ class ISACEnv(gym.Env):
     # Gymnasium API
     # ------------------------------------------------------------------
 
-    def reset(self, *, seed: int | None = None, options: dict[str, Any] | None = None) -> tuple[np.ndarray, dict[str, Any]]:  # type: ignore[override]
+    def reset(
+        self,
+        *,
+        seed: int | None = None,
+        options: dict[str, Any] | None = None,
+    ) -> tuple[np.ndarray, dict[str, Any]]:  # type: ignore[override]
         """
         Reset the environment to an initial state.
 
@@ -339,8 +292,15 @@ class ISACEnv(gym.Env):
         self._current_step = 0
         self._state = self.scenario.reset()
 
+        # Reset coherent channel if enabled
+        if hasattr(self.channel, "reset_coherent") and getattr(self.channel, "coherent", False):
+            self.channel.reset_coherent()
+
         # Generate channel for the initial state
-        self._H = self.channel.generate(velocity_ms=self._state["velocity"])
+        self._H = self.channel.generate(
+            velocity_ms=self._state["velocity"],
+            distance=self._state["distance"],
+        )
 
         obs = self._get_observation()
         info: dict[str, Any] = {}
@@ -369,12 +329,10 @@ class ISACEnv(gym.Env):
         # 2. Compute reward with fixed theoretical-bound normalisation
         # ------------------------------------------------------------------
         comm_rate = self._communication_rate(w)
-        sensing = self._sensing_gain(w)  # raw array gain
+        sens_norm = self._sensing_gain(w)
 
         # Normalise each term to [0, 1] using fixed theoretical bounds
         comm_norm = self._normalise(comm_rate, self._max_comm_rate)
-        sens_norm = self._normalise(sensing, self._max_sensing_gain)
-
 
         reward = (
             self.reward_cfg.alpha * comm_norm
@@ -386,7 +344,10 @@ class ISACEnv(gym.Env):
         # ------------------------------------------------------------------
         self._current_step += 1
         self._state = self.scenario.step()
-        self._H = self.channel.generate(velocity_ms=self._state["velocity"])
+        self._H = self.channel.generate(
+            velocity_ms=self._state["velocity"],
+            distance=self._state["distance"],
+        )
 
         # ------------------------------------------------------------------
         # 4. Termination / truncation
@@ -396,7 +357,7 @@ class ISACEnv(gym.Env):
 
         info: dict[str, Any] = {
             "comm_rate": comm_rate,
-            "sensing_gain": sensing,
+            "sensing_gain": sens_norm,  # renamed to reflect it is now norm
             "comm_norm": comm_norm,
             "sens_norm": sens_norm,
         }

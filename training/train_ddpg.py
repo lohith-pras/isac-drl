@@ -73,7 +73,8 @@ class NoiseDecayCallback(BaseCallback):
         # model.action_noise is an OrnsteinUhlenbeckActionNoise instance
         noise = self.model.action_noise
         if noise is not None:
-            noise.sigma = new_sigma * np.ones_like(noise.sigma)
+            # SB3 uses _sigma internally
+            noise._sigma = new_sigma * np.ones_like(noise._sigma)
         return True
 
 
@@ -108,6 +109,12 @@ def make_isac_env() -> gym.Env:
 # ------------------------------------------------------------------
 def main() -> None:
     """Train DDPG on the ISAC-MIMO environment."""
+    import argparse
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--timesteps", type=int, default=300_000)
+    args = parser.parse_args()
+
     # Paths
     root = Path(__file__).resolve().parent.parent
     log_dir = root / "logs" / "ddpg_isac"
@@ -162,7 +169,7 @@ def main() -> None:
     )
 
     # 5. Train -------------------------------------------------------
-    total_timesteps = 300_000
+    total_timesteps = args.timesteps
     print(f"Starting DDPG training for {total_timesteps:,} timesteps …")
     t_start = time.time()
     model.learn(total_timesteps=total_timesteps, callback=[progress_cb, noise_decay_cb, eval_cb])
@@ -170,11 +177,13 @@ def main() -> None:
     print(f"Training finished in {elapsed:.1f} s")
 
     # 6. Save final model + VecNormalize stats -----------------------
-    final_path = model_dir / "ddpg_isac_final"
-    model.save(str(final_path))
-    env.save(str(final_path / "vecnormalize.pkl"))
-    print(f"Final model saved to: {final_path}")
-    print(f"VecNormalize stats saved to: {final_path / 'vecnormalize.pkl'}")
+    final_dir = model_dir / "ddpg_isac_final"
+    final_dir.mkdir(parents=True, exist_ok=True)
+
+    model.save(str(final_dir / "model"))
+    env.save(str(final_dir / "vecnormalize.pkl"))
+    print(f"Final model saved to: {final_dir}")
+    print(f"VecNormalize stats saved to: {final_dir / 'vecnormalize.pkl'}")
 
     env.close()
 
