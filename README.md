@@ -1,6 +1,6 @@
 # ISAC-MIMO-DRL
 
-Deep reinforcement learning for beamforming in mmWave ISAC (Integrated Sensing and Communication) systems. The agent learns to steer a MIMO beamformer to balance communication rate and sensing accuracy — no closed-form solution needed.
+Deep reinforcement learning for beamforming in mmWave ISAC (Integrated Sensing and Communication) systems. The agent learns to steer a MIMO beamformer to balance communication rate and sensing accuracy , no closed-form solution needed.
 
 ## Background
 
@@ -48,9 +48,7 @@ The agent gets a weighted sum of two normalised terms:
 
 The balance is controlled by `alpha` and `beta` in `RewardConfig`.
 
-## Phased roadmap
 
-The project is being developed in five phases. See [`.hermes/plans/2026-05-19_145500-isac-mimo-drl-reorg-and-phases.md`](.hermes/plans/2026-05-19_145500-isac-mimo-drl-reorg-and-phases.md) for details.
 
 | Phase | What | Status |
 |-------|------|--------|
@@ -60,9 +58,6 @@ The project is being developed in five phases. See [`.hermes/plans/2026-05-19_14
 | P4 | WMMSE, MMSE-ISAC baselines, Pareto analysis | Planned |
 | P5 | Full write-up, ablation studies, reproducibility pack | Planned |
 
-## Why this matters for IDC
-
-This project is built for the research topic *"Intelligent Decision-making for Cognitive ISAC Networks"* (IDC, FAU, supervised by Dr. Lahmeri). The current setup is a single-node ISAC baseline. The natural next step is extending it to cognitive, network-level decision-making — adaptive coverage, interference-aware resource allocation, and environment-aware beamforming. That's exactly what the IDC project calls for.
 
 ## References
 

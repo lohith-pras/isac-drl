@@ -18,3 +18,4 @@ models/*.zip
 graphify-out/
 .agents/
 .env
+/AGENTS.md
