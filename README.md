@@ -1,68 +1,31 @@
 # ISAC-MIMO-DRL
 
-Deep reinforcement learning for beamforming in mmWave ISAC (Integrated Sensing and Communication) systems. The agent learns to steer a MIMO beamformer to balance communication rate and sensing accuracy , no closed-form solution needed.
+Deep reinforcement learning for beamforming in mmWave ISAC (Integrated Sensing and Communication) systems. A DDPG agent learns to steer a MIMO beamformer to balance communication throughput against sensing accuracy — no closed-form solution required.
+
+Research project completed during work at the German Aerospace Centre (DLR).
 
 ## Background
 
-This project builds on two papers:
+Built on two papers:
 
-**[Lillicrap et al. (2015)](https://arxiv.org/abs/1509.02971)** — DDPG maps raw channel observations to continuous beamforming weights. The policy learns the tradeoff between pointing energy at the communication receiver versus the sensing target.
+- **Lillicrap et al. (2015)** — DDPG for continuous action spaces. The policy maps raw channel observations to beamforming weights and learns the communication/sensing tradeoff end-to-end.
+- **Liu et al., IEEE ComST (2022)** — ISAC survey. The Pareto curve evaluation follows their formulation of the sensing-communication tradeoff.
 
-**[Liu et al. "Integrated Sensing and Communications" (IEEE 2022)](https://doi.org/10.1109/COMST.2022.3145772)** — this survey frames the fundamental tradeoff between sensing and communication in shared-spectrum systems. The Pareto curve evaluation in this project directly follows their formulation.
+Channel model: Saleh-Valenzuela clustered mmWave propagation. Mobility: 3GPP Release 16 NR-V2X.
 
-Other building blocks: the Saleh-Valenzuela clustered channel model for mmWave propagation, 3GPP Release 16 NR-V2X for vehicle mobility, and the Wymeersch et al. 6G ISAC framework as a longer-term reference.
+## Stack
 
-## Quick start
+- **DRL:** PyTorch, Stable-Baselines3, Gymnasium
+- **Optimisation:** CVXPY (convex baselines)
+- **Experimentation:** TensorBoard, Jupyter
+- **Python:** 3.11+, uv
+
+## Run
 
 ```bash
+pip install uv
 uv sync
-uv run python training/classical_baseline.py   # DFT steering-vector baseline
-uv run python training/train_ddpg.py           # train the DRL agent
-uv run pytest -v                               # 6 tests, should all pass
+jupyter notebook
 ```
 
-## Project structure
-
-```
-environment/     # Gymnasium env — ISACEnv, channel model, MIMO system, V2X scenario
-training/        # DDPG training, classical DFT baseline
-evaluation/      # evaluation scripts, Pareto curves, plotting
-models/          # saved SB3 checkpoints (gitignored)
-logs/            # .npy result files and .png plots
-docs/            # architecture docs, future reports
-tests/           # pytest suite (channel physics, reward behavior)
-```
-
-The main components live in `environment/`:
-- `isac_env.py` — the Gymnasium environment. Wraps everything.
-- `mimo_system.py` — ULA steering vectors, array gain calculations
-- `channel_model.py` — Saleh-Valenzuela clustered mmWave channel, supports both random and temporally coherent modes
-- `v2x_scenario.py` — 1D vehicle motion model
-
-## Reward design
-
-The agent gets a weighted sum of two normalised terms:
-
-- **Communication** — Shannon rate normalised by the theoretical maximum: `log2(1 + SNR) / log2(1 + SNR_max)`
-- **Sensing** — squared cosine similarity between the beamforming vector `w` and the steering vector at the target AoA: `|w^H · a(AoA)|^2 / (||w||^2 · Nt)`. This is 0 when the beam misses the target and 1 when it's perfectly aligned. No calibration needed.
-
-The balance is controlled by `alpha` and `beta` in `RewardConfig`.
-
-
-
-| Phase | What | Status |
-|-------|------|--------|
-| P1 | Reward redesign, channel physics fixes, verification tests, repo cleanup | **In progress** |
-| P2 | 3GPP channel model, UPA support, urban/highway V2X profiles | Planned |
-| P3 | PPO / SAC / TD3 benchmark suite | Planned |
-| P4 | WMMSE, MMSE-ISAC baselines, Pareto analysis | Planned |
-| P5 | Full write-up, ablation studies, reproducibility pack | Planned |
-
-
-## References
-
-- Lillicrap et al. *Continuous control with deep reinforcement learning*. arXiv:1509.02971, 2015.
-- Liu et al. *A survey on fundamental limits of integrated sensing and communication*. IEEE Commun. Surv. Tutor., 2022.
-- Saleh & Valenzuela. *A statistical model for indoor multipath propagation*. IEEE JSAC, 1987.
-- 3GPP TR 37.885 — *Study on NR V2X*, Release 16.
-- Wymeersch et al. *Integration of communication and sensing in 6G*. IEEE ComMag, 2021.
+See `notebooks/` for training runs and Pareto curve plots.
