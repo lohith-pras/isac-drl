@@ -20,10 +20,6 @@ or
 
 from __future__ import annotations
 
-import sys
-
-sys.path.insert(0, '/content/isac-mimo-drl')
-
 import math
 from pathlib import Path
 from typing import NamedTuple
@@ -166,15 +162,14 @@ def _theoretical_max_comm_rate() -> float:
 
 def _calibrate_max_sensing_gain() -> float:
     """
-    Return the empirical sensing-gain bound from a fresh ISACEnv.
+    Return the sensing-gain normalisation bound.
 
-    Instantiating ISACEnv runs the 500-sample calibration internally,
-    so we can read ``_max_sensing_gain`` directly.
+    The sensing reward is squared cosine similarity, already normalised to
+    [0, 1] by construction (see ISACEnv._sensing_gain), and the values stored
+    in the .npy result files are these normalised quantities. No calibration
+    is needed, so the bound is simply 1.0.
     """
-    env = _make_env()
-    bound = env._max_sensing_gain
-    env.close()
-    return float(bound)
+    return 1.0
 
 
 def _normalise_loaded_data(
@@ -307,7 +302,7 @@ def _build_plot(
         # ------------------------------------------------------------------
         cmap = plt.cm.plasma  # type: ignore[attr-defined]
         alphas_arr = np.array([p.alpha for p in sweep_points], dtype=float)
-        colours = cmap((alphas_arr - alphas_arr.min()) / (alphas_arr.ptp() + 1e-9))
+        colours = cmap((alphas_arr - alphas_arr.min()) / (np.ptp(alphas_arr) + 1e-9))
 
         for pt, col in zip(sweep_points, colours):
             ax.scatter(

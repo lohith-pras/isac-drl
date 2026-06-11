@@ -33,7 +33,7 @@ from utils.reward_config import RewardConfig
 # Paths
 # ---------------------------------------------------------------------------
 _ROOT = Path(__file__).resolve().parent.parent
-_MODEL_DIR = _ROOT / "models" / "ddpg_isac_best"
+_MODEL_DIR = _ROOT / "models" / "ddpg_isac_final"
 _VECNORM_PATH = _MODEL_DIR / "vecnormalize.pkl"
 _LOG_DIR = _ROOT / "logs"
 _RESULTS_PATH = _LOG_DIR / "ddpg_eval.npy"
@@ -155,7 +155,7 @@ def evaluate(n_episodes: int = N_EVAL_EPISODES) -> dict[str, np.ndarray]:
     # ------------------------------------------------------------------
     # 1. Validate model artifacts exist
     # ------------------------------------------------------------------
-    model_zip = _MODEL_DIR / "best_model.zip"
+    model_zip = _MODEL_DIR / "model.zip"
     if not model_zip.exists():
         raise FileNotFoundError(
             f"Model checkpoint not found at: {model_zip}\n"
@@ -183,7 +183,7 @@ def evaluate(n_episodes: int = N_EVAL_EPISODES) -> dict[str, np.ndarray]:
     # 3. Load the DDPG model
     # ------------------------------------------------------------------
     print(f"Loading model from: {model_zip}")
-    model = DDPG.load(str(_MODEL_DIR / "best_model"), env=vec_env)
+    model = DDPG.load(str(_MODEL_DIR / "model"), env=vec_env)
     print("Model loaded successfully.\n")
 
     # ------------------------------------------------------------------

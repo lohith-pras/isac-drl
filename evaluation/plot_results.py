@@ -27,10 +27,6 @@ or
 
 from __future__ import annotations
 
-import sys
-
-sys.path.insert(0, '/content/isac-mimo-drl')
-
 import math
 from pathlib import Path
 
@@ -61,7 +57,7 @@ _EVAL_NPZ = _LOG_DIR / "ddpg_isac" / "evaluations.npz"
 _DDPG_NPY = _LOG_DIR / "ddpg_eval.npy"
 _BASELINE_NPY = _LOG_DIR / "classical_baseline.npy"
 
-_MODEL_DIR = _ROOT / "models" / "ddpg_isac_best"
+_MODEL_DIR = _ROOT / "models" / "ddpg_isac_final"
 _VECNORM_PKL = _MODEL_DIR / "vecnormalize.pkl"
 
 # Fixed evaluation AoA for the beam-pattern plot
@@ -120,9 +116,9 @@ def _load_ddpg_with_vecnorm() -> tuple[DDPG, VecNormalize]:
     -------
     tuple[DDPG, VecNormalize]
     """
-    if not (_MODEL_DIR / "best_model.zip").exists():
+    if not (_MODEL_DIR / "model.zip").exists():
         raise FileNotFoundError(
-            f"Model not found at {_MODEL_DIR / 'best_model.zip'}.\n"
+            f"Model not found at {_MODEL_DIR / 'model.zip'}.\n"
             "Run training/train_ddpg.py first."
         )
     if not _VECNORM_PKL.exists():
@@ -139,7 +135,7 @@ def _load_ddpg_with_vecnorm() -> tuple[DDPG, VecNormalize]:
     vec_env.training = False
     vec_env.norm_reward = False
 
-    model = DDPG.load(str(_MODEL_DIR / "best_model"), env=vec_env)
+    model = DDPG.load(str(_MODEL_DIR / "model"), env=vec_env)
     return model, vec_env
 
 

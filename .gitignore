@@ -14,7 +14,12 @@ wheels/
 .ruff_cache/
 .pytest_cache/
 models/*.zip
+models/**/*.zip
+models/**/*.pkl
 *.npy
+*.npz
+logs/*.png
+events.out.tfevents.*
 graphify-out/
 .agents/
 .env

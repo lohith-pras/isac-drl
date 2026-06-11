@@ -16,15 +16,6 @@ dependencies = [
     "tensorboard",
     "jupyter",
     "tqdm",
-    "openai",
-    "python-dotenv>=1.2.2",
-]
-
-[project.optional-dependencies]
-dev = [
-    "pytest",
-    "pytest-cov",
-    "ruff",
 ]
 
 [build-system]
@@ -44,5 +35,7 @@ packages = ["environment", "training", "utils", "evaluation"]
 
 [dependency-groups]
 dev = [
-    "graphifyy>=0.7.16",
+    "pytest",
+    "pytest-cov",
+    "ruff",
 ]
