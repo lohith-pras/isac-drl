@@ -2,7 +2,7 @@
 
 Deep reinforcement learning for beamforming in mmWave ISAC (Integrated Sensing and Communication) systems. A DDPG agent learns to steer a MIMO beamformer to balance communication throughput against sensing accuracy — no closed-form solution required.
 
-Research project completed during work at the German Aerospace Centre (DLR).
+
 
 ## Background
 
